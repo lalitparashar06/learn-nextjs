@@ -7,7 +7,7 @@ export default function IntroWithColtem() {
         <div className="introwrap max-w-[1000px] text-center m-auto pb-[100px]">
           <h3 className="text-[black] text-[30px] ">
             Headline About <span className="text-[red]">Challenges </span>in the
-            Industry
+            Ajay
           </h3>
           <p className="text-[black] text-[20px] pt-[20px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
