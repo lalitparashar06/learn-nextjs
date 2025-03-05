@@ -1,0 +1,34 @@
+.arrow::before {
+  content: "";
+  position: absolute;
+  transition: all 0.3sease;
+  right: 0;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #fff;
+
+  border-width: 0 2px 2px 0;
+  transform: translateY(-53%) rotate(-45deg);
+}
+.arrow::after {
+  transition: all 0.3sease;
+  content: "";
+  position: absolute;
+  right: 1px;
+  top: 50%;
+  width: 14px;
+  height: 2px;
+  background: #fff;
+  margin-top: -1px;
+}
+
+.cardiItem :hover .animBtn {
+  background-color: #fff;
+  color: #08e1d9;
+}
+
+.cardiItem :hover .readinsights {
+  background-color: #fff;
+  max-width: 135px;
+}
