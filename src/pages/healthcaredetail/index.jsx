@@ -3,6 +3,7 @@ import IntroWithColTwoItem from "@/components/IntroWithColTwoItem";
 import IntroWithImg from "@/components/IntroWithImg";
 import HealthCareColThreeGrid from "@/components/HealthCareColThreeGrid";
 import ImgQuoteContent from "@/components/ImgQuoteContent";
+import IndustryCtaBlock from "@/components/IndustryCtaBlock";
 import React from "react";
 
 export default function Index() {
@@ -13,6 +14,7 @@ export default function Index() {
       <IntroWithImg />
       <HealthCareColThreeGrid />
       <ImgQuoteContent />
+      <IndustryCtaBlock />
     </>
   );
 }

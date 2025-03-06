@@ -6,9 +6,9 @@ export default function HealthCareColThreeGrid() {
       <div className="container">
         <div className="card-wrap flex flex-wrap w-[calc(100%+20px)] ml-[-10px]">
           <div
-            className={`cardiItem ${styles.cardiItem} relative mt-0 mx-[10px] mb-5 w-[calc(33.33%%-20px)] overflow-hidden`}
+            className={`cardiItem ${styles.cardiItem} relative mt-0 mx-[10px] mb-5 w-[calc(33.33%-20px)] overflow-hidden`}
           >
-            <div className="img-wrap h-[100%] max-w-[359px] overflow-hidden relative">
+            <div className="img-wrap h-[100%] max-h-[359px] overflow-hidden relative">
               <img src="/images/splunk.png" className="relative"></img>
             </div>
             <span
@@ -25,9 +25,9 @@ export default function HealthCareColThreeGrid() {
             </span>
           </div>
           <div
-            className={`cardiItem ${styles.cardiItem} relative mt-0 mx-[10px] mb-5 w-[calc(33.33%%-20px)] overflow-hidden`}
+            className={`cardiItem ${styles.cardiItem}  relative mt-0 mx-[10px] mb-5 w-[calc(33.33%-20px)] overflow-hidden`}
           >
-            <div className="img-wrap h-[100%] max-w-[359px] overflow-hidden relative">
+            <div className="img-wrap h-[100%] max-h-[359px] overflow-hidden relative">
               <img
                 src="/images/boost-mobil-phone.png"
                 className="relative"
@@ -47,9 +47,9 @@ export default function HealthCareColThreeGrid() {
             </span>
           </div>
           <div
-            className={`cardiItem ${styles.cardiItem} relative mt-0 mx-[10px] mb-5 w-[calc(33.33%%-20px)] overflow-hidden`}
+            className={`cardiItem ${styles.cardiItem}  relative mt-0 mx-[10px] mb-5 w-[calc(33.33%-20px)] overflow-hidden`}
           >
-            <div className="img-wrap h-[100%] max-w-[359px] overflow-hidden relative">
+            <div className="img-wrap h-[100%] max-h-[359px] overflow-hidden relative">
               <img
                 src="/images/surescripts-template.png"
                 className="relative"
@@ -69,9 +69,9 @@ export default function HealthCareColThreeGrid() {
             </span>
           </div>
           <div
-            className={`cardiItem ${styles.cardiItem} relative mt-0 mx-[10px] mb-5 w-[calc(33.33%%-20px)] overflow-hidden`}
+            className={`cardiItem ${styles.cardiItem}  relative mt-0 mx-[10px] mb-5 w-[calc(33.33%-20px)] overflow-hidden`}
           >
-            <div className="img-wrap h-[100%] max-w-[359px] overflow-hidden relative">
+            <div className="img-wrap h-[100%] max-h-[359px] overflow-hidden relative">
               <img src="/images/cisco-template.png" className="relative"></img>
             </div>
             <span
@@ -88,9 +88,9 @@ export default function HealthCareColThreeGrid() {
             </span>
           </div>
           <div
-            className={`cardiItem ${styles.cardiItem} relative mt-0 mx-[10px] mb-5 w-[calc(33.33%%-20px)] overflow-hidden`}
+            className={`cardiItem ${styles.cardiItem}  relative mt-0 mx-[10px] mb-5 w-[calc(33.33%-20px)] overflow-hidden`}
           >
-            <div className="img-wrap h-[100%] max-w-[359px] overflow-hidden relative">
+            <div className="img-wrap h-[100%] max-h-[359px] overflow-hidden relative">
               <img src="/images/habu-template.png" className="relative"></img>
             </div>
             <span
@@ -107,9 +107,9 @@ export default function HealthCareColThreeGrid() {
             </span>
           </div>
           <div
-            className={`cardiItem ${styles.cardiItem} relative mt-0 mx-[10px] mb-5 w-[calc(33.33%%-20px)] overflow-hidden`}
+            className={`cardiItem ${styles.cardiItem}  relative mt-0 mx-[10px] mb-5 w-[calc(33.33%-20px)] overflow-hidden`}
           >
-            <div className="img-wrap h-[100%] max-w-[359px] overflow-hidden relative">
+            <div className="img-wrap h-[100%] max-h-[359px] overflow-hidden relative">
               <img
                 src="/images/cohesity-template.png"
                 className="relative"
