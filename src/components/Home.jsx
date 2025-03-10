@@ -1,11 +1,11 @@
 export default function Home() {
   return (
-    <section className="Base bg-gradient-to-r from-green-300 to-blue-300">
+    <section className="Home bg-gradient-to-r from-green-300 to-blue-300">
       <div className="container">
         <div className="row-wrap relative flex flex-wrap w-[calc(100%+60px)] ml-[-30px] items-center">
-          <div className="col-two w-[calc(50%-60px)] mx-[30px]">
+          <div className="col-two w-[calc(50%-60px)] mx-[30px] lg:w-full">
             <div className="content">
-              <h2 className="text-[48px] pb-[30px]">
+              <h2 className=" pb-[30px]">
                 The scale of a platform With storage that never stops you.
               </h2>
               <p className="text-[18px] ">
@@ -16,7 +16,7 @@ export default function Home() {
                 accelerated and continuous application development within
                 virtual machines and containers.
               </p>
-              <div className="btn inline-block bg-[black] text-gray-500 text-center border border-transparent px-3 py-1.5 text-base leading-6 rounded-md mt-[30px]">
+              <div className="btn inline-block bg-[black] text-gray-500 text-center border border-transparent px-3 py-1.5 text-base leading-6 rounded-md mt-[30px] ">
                 <a href="#" className="text-[white]">
                   {" "}
                   Read Solution Brief
@@ -24,7 +24,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="col-two w-[calc(50%-60px)] mx-[30px]">
+          <div className="col-two w-[calc(50%-60px)] mx-[30px] lg:w-full">
             <div className="img-wrap w-[100%]">
               <img src="/images/campaign-landing-hero-1.svg"></img>
             </div>

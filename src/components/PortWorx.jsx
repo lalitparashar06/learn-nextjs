@@ -4,7 +4,7 @@ export default function PortWorx() {
       <div className="container">
         <div className="row mr-[-15px] ml-[-15px]">
           <div className="content">
-            <h2 className="text-[48px]">
+            <h2 className="">
               Curabitur vitae nunc sed velit Integer malesuada nunc vel risus
               commodo viverra
             </h2>

@@ -3,9 +3,9 @@ export default function Home() {
     <section className="VideoContnet bg-[#2c2a2b]">
       <div className="container">
         <div className="row-wrap relative flex flex-wrap w-[calc(100%+60px)] ml-[-30px] items-center">
-          <div className="col-two w-[calc(50%-60px)] mx-[30px]">
+          <div className="col-two w-[calc(50%-60px)] mx-[30px] lg:w-full">
             <div className="content">
-              <h2 className="text-[55px] text-[#fff] ">
+              <h2 className=" text-[#fff] ">
                 Arcu tristique risus massa hac proin sed
               </h2>
             </div>
@@ -40,7 +40,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="col-two w-[calc(50%-60px)] mx-[30px]">
+          <div className="col-two w-[calc(50%-60px)] mx-[30px] lg:w-full">
             <div className="img-wrap w-[100%]">
               <img src="/images/portworkx-platform.svg.imgo 1.png"></img>
             </div>

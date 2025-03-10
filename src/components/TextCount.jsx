@@ -4,17 +4,15 @@ export default function TextCount() {
       <div className="container">
         <div className="wrapper">
           <div className="text-wrapper ">
-            <h2 className="text-[48px]">
-              Arcu tristique risus massa hac proin
-            </h2>
+            <h2 className="">Arcu tristique risus massa hac proin</h2>
             <p className="max-w-[838px] pt-[30px]">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
               quae ab illo inventore veritatis et quasi architecto beatae.
             </p>
           </div>
-          <div className="counter-wrap flex flex-wrap w-[calc(100%+128px)] -ml-16 mt-20 bg-gradient-to-r from-yellow-300 to-blue-300 p-[30px]">
-            <div className="col-three flex flex-wrap w-1/3 max-w-[calc(33.33%-128px)] mx-16">
+          <div className="counter-wrap flex flex-wrap w-[calc(100%+128px)] -ml-16 mt-20 bg-gradient-to-r from-yellow-300 to-blue-300 p-[30px] lg:justify-left lg:w-[calc(100%+60px)] lg:ml-[-30px] tablet:block tablet:m-auto tablet:w-full tablet:mt-[20px] mdDown:block mdDown:m-auto mdDown:w-full mdDown:mt-[20px]">
+            <div className="col-three flex flex-wrap  w-[calc(33.33%-128px)] mx-16 lg:w-[calc(50%-60px)] lg:mx-[30px] lg:mt-[20px]   mdDown:block mdDown:m-auto mdDown:w-full mdDown:mt-[20px]">
               <div className="wrap-one">
                 <div className="text-wrap">
                   <h1 className="text-[black] ">
@@ -32,7 +30,7 @@ export default function TextCount() {
                 </div>
               </div>
             </div>
-            <div className="col-three flex flex-wrap w-1/3 max-w-[calc(33.33%-128px)] mx-16">
+            <div className="col-three flex flex-wrap  w-[calc(33.33%-128px)] mx-16 lg:w-[calc(50%-60px)] lg:mx-[30px] lg:mt-[20px] tablet:block tablet:m-auto tablet:w-full tablet:mt-[20px] mdDown:block mdDown:m-auto mdDown:w-full mdDown:mt-[20px]  ">
               <div className="wrap-one">
                 <div className="text-wrap">
                   <h1 className="text-[black] ">
@@ -50,7 +48,7 @@ export default function TextCount() {
                 </div>
               </div>
             </div>
-            <div className="col-three flex flex-wrap w-1/3 max-w-[calc(33.33%-128px)] mx-16">
+            <div className="col-three flex flex-wrap  w-[calc(33.33%-128px)] mx-16 lg:w-[calc(50%-60px)] lg:mx-[30px] lg:mt-[20px] tablet:block tablet:m-auto tablet:w-full tablet:mt-[20px] mdDown:block mdDown:m-auto mdDown:w-full mdDown:mt-[20px]">
               <div className="wrap-one">
                 <div className="text-wrap">
                   <h1 className="text-[black] ">
