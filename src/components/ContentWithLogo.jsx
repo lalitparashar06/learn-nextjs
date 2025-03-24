@@ -1,6 +1,6 @@
 export default function ContentWithLogo() {
   return (
-    <section class="ContentWithLogo bg-[#faf7f1]">
+    <section class="ContentWithLogo bg-[#e2a7f9]">
       <div class="container mx-auto px-4">
         <div class="wrapper relative flex flex-wrap -ml-4 w-[calc(100%+30px)]">
           <div class="col-three relative w-[calc(33.33%-30px)] mx-[15px] mb-5 p-[40px] flex flex-wrap items-end justify-end first:items-center  lg:w-[100%] lg:justify-center block">

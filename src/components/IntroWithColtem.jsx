@@ -7,7 +7,7 @@ export default function IntroWithColtem() {
         <div className="introwrap max-w-[1000px] text-center m-auto pb-[30px]">
           <h3 className="text-[black] text-[30px] ">
             Headline About <span className="text-[red]">Challenges </span>in the
-            Ajay verma
+            Industries
           </h3>
           <p className="text-[black] text-[20px] pt-[20px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -15,8 +15,8 @@ export default function IntroWithColtem() {
             ad minim veniam, quis nostrud exercitation ullamco laboris.
           </p>
         </div>
-        <div className="colwrap w-[calc(100%+40px)] ml-[-20px] flex flex-wrap justify-center">
-          <div className="inneritem w-[calc(27.81%+40px)] my-0 mx-5 flex flex-wrap justify-center text-center mt-[50px]">
+        <div className="colwrap w-[calc(100%+40px)] ml-[-20px] flex flex-wrap justify-center ">
+          <div className="inneritem w-[calc(31%-40px)] my-0 mx-5 flex flex-wrap justify-center text-center ">
             <div className="iconwrap relative max-w-[53px] h-[51px] w-[100%] overflow-hidden mb-[50px]">
               <img src="/images/codepen.svg"></img>
             </div>
@@ -30,7 +30,7 @@ export default function IntroWithColtem() {
               </p>
             </div>
           </div>
-          <div className="inneritem w-[calc(27.81%+40px)] my-0 mx-5 flex flex-wrap justify-center text-center mt-[50px]">
+          <div className="inneritem w-[calc(31%-40px)] my-0 mx-5 flex flex-wrap justify-center text-center mt-[50px]">
             <div className="iconwrap relative max-w-[53px] h-[51px] w-[100%] overflow-hidden mb-[50px]">
               <img src="/images/codepen.svg"></img>
             </div>
@@ -44,7 +44,7 @@ export default function IntroWithColtem() {
               </p>
             </div>
           </div>
-          <div className="inneritem w-[calc(27.81%+40px)] my-0 mx-5 flex flex-wrap justify-center text-center mt-[50px]">
+          <div className="inneritem w-[calc(31%+40px)] my-0 mx-5 flex flex-wrap justify-center text-center mt-[50px]">
             <div className="iconwrap relative max-w-[53px] h-[51px] w-[100%] overflow-hidden mb-[50px]">
               <img src="/images/codepen.svg"></img>
             </div>
