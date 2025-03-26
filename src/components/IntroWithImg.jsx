@@ -2,11 +2,11 @@ import React from "react";
 
 export default function IntroWithColTwoItem() {
   return (
-    <section className="IntroWithColTwoItem">
+    <section className="IntroWithImg">
       <div className="container">
         <div className="outer-wrap w-[100%] flex flex-wrap items-center">
-          <div className="contentitem w-[55%]">
-            <div className="contentwrap pr-[60px]">
+          <div className="contentitem w-[55%] phablet:w-full phablet:mb-[30px] phone:w-full phone:mb-[30px] xs:w-full xs:mb-[30px]">
+            <div className="contentwrap pr-[60px] phablet:pr-0 phone:pr-0 xs:pr-0">
               <h4 className="font-[700] text-[black]">
                 Lorem ipsum dolor sit amet consectetur. Ipsum amet in diam
                 vitae.
@@ -20,7 +20,7 @@ export default function IntroWithColTwoItem() {
               </p>
             </div>
           </div>
-          <div className="imgitem w-[45%]">
+          <div className="imgitem w-[45%] phablet:w-full phone:w-full xs:w-full">
             <div className="imgwrap max-h-[500px] h-[100%] overflow-hidden">
               <img src="/images/laptopm2.png"></img>
             </div>

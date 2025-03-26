@@ -10,17 +10,17 @@ export default function IntroWithColTwoItem() {
           </h3>
         </div>
         <div className="outer-wrap w-[100%] flex flex-wrap items-center">
-          <div className="imgitem w-[45%]">
+          <div className="imgitem w-[45%] phablet:w-full phablet:mb-[30px] phone:w-full phone:mb-[30px] xs:w-full xs:mb-[30px]">
             <div className="imgwrap max-h-[500px] h-[100%] overflow-hidden">
               <img src="/images/laptopm2.png"></img>
             </div>
           </div>
-          <div className="contentitem w-[55%]">
-            <div className="contentwrap pl-[60px]">
-              <h4 className="font-[700] text-[black]">
+          <div className="contentitem w-[55%] phablet:w-full phone:w-full xs:w-full ">
+            <div className="contentwrap pl-[60px]  phablet:pl-0 phone:pl-0 xs:pl-0">
+              <h3 className=" text-[black] ">
                 Lorem ipsum dolor sit amet consectetur. Ipsum amet in diam
                 vitae.
-              </h4>
+              </h3>
               <p className="pt-[20px] ">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
