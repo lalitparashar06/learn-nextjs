@@ -2,11 +2,11 @@ import styles from "@/styles/HealthCareColThreeGrid.module.css";
 
 export default function HealthCareColThreeGrid() {
   return (
-    <section className="HealthCareColThreeGrid bg-[#E5E4E7] px-[70px] ">
+    <section className="HealthCareColThreeGrid bg-[#E5E4E7] px-[70px]  phablet:px-0  phone:px-0 xs:px-0">
       <div className="container">
         <div className="card-wrap flex flex-wrap w-[calc(100%+20px)] ml-[-10px]">
           <div
-            className={`cardiItem ${styles.cardiItem} relative mt-0 mx-[10px] mb-5 w-[calc(33.33%-20px)] overflow-hidden`}
+            className={`cardiItem ${styles.cardiItem} relative mt-0 mx-[10px] mb-5 w-[calc(33.33%-20px)] overflow-hidden phablet:w-[calc(50%-20px)] phone:w-full xs:w-full`}
           >
             <div className="img-wrap h-[100%] max-h-[359px] overflow-hidden relative">
               <img src="/images/splunk.png" className="relative"></img>
@@ -25,7 +25,7 @@ export default function HealthCareColThreeGrid() {
             </span>
           </div>
           <div
-            className={`cardiItem ${styles.cardiItem}  relative mt-0 mx-[10px] mb-5 w-[calc(33.33%-20px)] overflow-hidden`}
+            className={`cardiItem ${styles.cardiItem}  relative mt-0 mx-[10px] mb-5 w-[calc(33.33%-20px)] overflow-hidden phablet:w-[calc(50%-20px)] phone:w-full xs:w-full`}
           >
             <div className="img-wrap h-[100%] max-h-[359px] overflow-hidden relative">
               <img
@@ -47,7 +47,7 @@ export default function HealthCareColThreeGrid() {
             </span>
           </div>
           <div
-            className={`cardiItem ${styles.cardiItem}  relative mt-0 mx-[10px] mb-5 w-[calc(33.33%-20px)] overflow-hidden`}
+            className={`cardiItem ${styles.cardiItem}  relative mt-0 mx-[10px] mb-5 w-[calc(33.33%-20px)] overflow-hidden phablet:w-[calc(50%-20px)] phone:w-full xs:w-full`}
           >
             <div className="img-wrap h-[100%] max-h-[359px] overflow-hidden relative">
               <img
@@ -69,7 +69,7 @@ export default function HealthCareColThreeGrid() {
             </span>
           </div>
           <div
-            className={`cardiItem ${styles.cardiItem}  relative mt-0 mx-[10px] mb-5 w-[calc(33.33%-20px)] overflow-hidden`}
+            className={`cardiItem ${styles.cardiItem}  relative mt-0 mx-[10px] mb-5 w-[calc(33.33%-20px)] overflow-hidden phablet:w-[calc(50%-20px)] phone:w-full xs:w-full`}
           >
             <div className="img-wrap h-[100%] max-h-[359px] overflow-hidden relative">
               <img src="/images/cisco-template.png" className="relative"></img>
@@ -88,7 +88,7 @@ export default function HealthCareColThreeGrid() {
             </span>
           </div>
           <div
-            className={`cardiItem ${styles.cardiItem}  relative mt-0 mx-[10px] mb-5 w-[calc(33.33%-20px)] overflow-hidden`}
+            className={`cardiItem ${styles.cardiItem}  relative mt-0 mx-[10px] mb-5 w-[calc(33.33%-20px)] overflow-hidden phablet:w-[calc(50%-20px)] phone:w-full xs:w-full`}
           >
             <div className="img-wrap h-[100%] max-h-[359px] overflow-hidden relative">
               <img src="/images/habu-template.png" className="relative"></img>
@@ -107,7 +107,7 @@ export default function HealthCareColThreeGrid() {
             </span>
           </div>
           <div
-            className={`cardiItem ${styles.cardiItem}  relative mt-0 mx-[10px] mb-5 w-[calc(33.33%-20px)] overflow-hidden`}
+            className={`cardiItem ${styles.cardiItem}  relative mt-0 mx-[10px] mb-5 w-[calc(33.33%-20px)] overflow-hidden phablet:w-[calc(50%-20px)] phone:w-full xs:w-full`}
           >
             <div className="img-wrap h-[100%] max-h-[359px] overflow-hidden relative">
               <img

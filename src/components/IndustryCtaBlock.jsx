@@ -10,14 +10,14 @@ export default function IndustryCtaBlock() {
               className="w-[100%] h-[100%]"
             ></img>
           </div>
-          <div className="content-wrap max-w-full relative z-[1] py-[120px] px-[30px]">
-            <h2 className="text-6xl font-bold tracking-normal text-left text-white">
+          <div className="content-wrap max-w-full relative z-[1] py-[120px] px-[30px] phablet:pt-[97px] phablet:pr-[30px] phablet:pb-[100px] phablet:pl-[30px]">
+            <h2 className="font-bold tracking-normal text-left text-white">
               Cybersecurity
             </h2>
             <div className="btn-wrap mt-[30px]">
               <a
                 href="#"
-                className="text-[#7f7f7f] cursor-pointer bg-[transparent]"
+                className="text-[#ff1f1f] cursor-pointer bg-[transparent]"
               >
                 Let’s Work Together
               </a>
@@ -28,14 +28,14 @@ export default function IndustryCtaBlock() {
           <div className="bg-img absolute left-0 w-[100%] h-[100%] overflow-hidden ">
             <img src="/images/healthcare-check-xray.jpg"></img>
           </div>
-          <div className="content-wrap max-w-full relative z-[1] py-[120px] px-[30px]">
-            <h2 className="text-6xl font-bold tracking-normal text-left text-white">
+          <div className="content-wrap max-w-full relative z-[1] py-[120px] px-[30px] phablet:pt-[97px] phablet:pr-[30px] phablet:pb-[100px] phablet:pl-[30px]">
+            <h2 className=" font-bold tracking-normal text-left text-white">
               Cybersecurity
             </h2>
             <div className="btn-wrap mt-[30px]">
               <a
                 href="#"
-                className="text-[#7f7f7f] cursor-pointer bg-[transparent]"
+                className="text-[#ff2020] cursor-pointer bg-[transparent]"
               >
                 Let’s Work Together
               </a>
