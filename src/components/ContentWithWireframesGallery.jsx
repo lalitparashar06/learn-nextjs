@@ -2,11 +2,11 @@ import React from "react";
 
 export default function Viralone() {
   return (
-    <section class="relative pt-[100px] bg-white">
+    <section class="ContentWithWireframesGallery relative pt-[100px] bg-[#deb4ec]">
       <div class="bg-img absolute top-[238px] left-0 w-full h-full bg-gradient-to-br from-[#0033a1] via-[#004fb5] to-[#0071ce] [clip-path:polygon(0_0,0%_0,260%_100%,0%_100%)]"></div>
 
-      <div class="container mx-auto">
-        <div class="column-wrap flex  -mx-[15px] items-end">
+      <div class="container         ">
+        <div class="column-wrap flex   items-end">
           <div class="items w-full md:w-[calc(50%-30px)] mx-[15px]">
             <div class="inner-content-wrap flex flex-wrap -mx-[15px] items-end">
               <div class="row-outer w-[calc(50%-30px)] mx-[15px]">
@@ -49,7 +49,7 @@ export default function Viralone() {
             </div>
           </div>
 
-          <div class="items w-full md:w-[calc(50%-30px)] mx-[15px]">
+          <div class="items w-full   md:w-[calc(50%-30px)] mx-[15px]">
             <div class="inner-content pt-[90px] pb-[80px]">
               <h3 class="text-black mb-[15px] text-xl font-semibold">
                 Design System Lorem Ipsum Dolor Consectuer

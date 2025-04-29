@@ -46,7 +46,7 @@ export default function Viralone() {
             </div>
           </div>
           <div class="item w-[calc(33.33%-40px)] mx-5 sm:w-full sm:mx-auto sm:mb-5 ">
-            <div class=" img-wrapper w-full overflow-hidden">
+            <div class="img-wrapper w-full ">
               <img
                 src="/images/multi-color-graphic.png"
                 alt="multi-color graphic"
