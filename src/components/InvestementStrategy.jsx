@@ -5,7 +5,8 @@ export default function InvestementStrategy() {
       <div className="container">
         <div className="intro  flex flex-wrap items-center  justify-center ">
           <h3 className="text-[#1D2D40] text-center font-montserrat text-6xl font-bold leading-[120%] pb-[16px] ">
-            Investment Strategy Overview.
+            Investment Strategy Overview
+            <span className="text-[#F2AD24]">.</span>
           </h3>
           <p class="text-[#0D0D0D] text-center font-montserrat text-base font-normal leading-[150%] tracking-[0.4px]   pr-[237px] pb-[12px] pl-[347px]">
             We focus on investment archetypes ranging from early-stage
@@ -38,14 +39,45 @@ export default function InvestementStrategy() {
               </div>
             </div>
           </div>
-          <div className="content-right w-[724px]">
-            <div className="item flex w-[496px] p-[40px] pb-[48px] items-start gap-[24px] flex-wrap">
-              <h4 className="text-black">Buyouts</h4>
-              <p className="text-black">
-                Well-positioned companies with strong products and potential for
-                operational improvement and expansion via adjacencies
-              </p>
-            </div>
+          <div className="content-right h-[452px] w-[724px] bg-white opacity-70 mt-[100px] ">
+            <ul className="item flex w-[496px]  pb-[48px] items-start gap-[24px] flex-wrap ">
+              <li
+                className="active p-[40px] bg-white shadow-[0_0_16px_0_rgba(0,0,0,0.04)] border-t border-t-transparent rounded-t-[16px] border-b-[4px] border-b-[rgb(0,191,200)] !border-b-[rgb(0,191,200)]
+"
+              >
+                <h4 className="text-[color:var(--Secondary-Teal,#026D85)] font-montserrat text-[32px] not-italic font-semibold leading-[120%]">
+                  Buyouts
+                </h4>
+                <p className="hidden-content text-[color:var(--Primary-Black,#0D0D0D)] font-montserrat text-[18px] not-italic font-normal leading-[150%] tracking-[0.36px]">
+                  Well-positioned companies with strong products and potential
+                  for operational improvement and expansion via adjacencies
+                </p>
+              </li>
+              <li
+                className="bg-white p-[40px] shadow-[0_0_16px_0_rgba(0,0,0,0.04)] border-t border-t-transparent rounded-t-[16px] border-b-[4px] border-b-[rgb(0,191,200)] !border-b-[rgb(0,191,200)]
+"
+              >
+                <h4 className="text-[color:var(--Secondary-Teal,#026D85)] font-montserrat text-[32px] not-italic font-semibold leading-[120%]">
+                  Buyouts
+                </h4>
+                <p className="hidden-content text-[color:var(--Primary-Black,#0D0D0D)] font-montserrat text-[18px] not-italic font-normal leading-[150%] tracking-[0.36px]">
+                  Well-positioned companies with strong products and potential
+                  for operational improvement and expansion via adjacencies
+                </p>
+              </li>
+              <li
+                className="bg-white p-[40px] shadow-[0_0_16px_0_rgba(0,0,0,0.04)] border-t border-t-transparent rounded-t-[16px] border-b-[4px] border-b-[rgb(0,191,200)] !border-b-[rgb(0,191,200)]
+"
+              >
+                <h4 className="text-[color:var(--Secondary-Teal,#026D85)] font-montserrat text-[32px] not-italic font-semibold leading-[120%]">
+                  Buyouts
+                </h4>
+                <p className="hidden-content text-[color:var(--Primary-Black,#0D0D0D)] font-montserrat text-[18px] not-italic font-normal leading-[150%] tracking-[0.36px]">
+                  Well-positioned companies with strong products and potential
+                  for operational improvement and expansion via adjacencies
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
