@@ -29,55 +29,24 @@ export default function CardWithText() {
             can find and help build great companies.
           </p>
         </div>
-        <div
-          className="card-wrap mt-[64px] flex justify-center w-[calc(100%+20px)] -ml-[10px] flex-wrap relative z-[4]
-"
-        >
-          <div
-            className="dark-teal relative bg-[rgb(0,77,124)]
- max-w-[392px] w-[calc(33.333%-20px)] flex flex-wrap items-end p-[40px] rounded-[16px] mx-[10px] mb-[20px] transition-all duration-[600ms] ease-linear
-"
-          >
+        <div className="card-wrap mt-[64px] flex justify-center w-[calc(100%+20px)] -ml-[10px] flex-wrap relative z-[4]">
+          {/* Card 1 */}
+          <div className="group relative bg-[rgb(0,77,124)] max-w-[392px] w-[calc(33.333%-20px)] flex flex-wrap items-end p-[40px] rounded-[16px] mx-[10px] mb-[20px] transition-all duration-[600ms] ease-linear hover:-translate-y-2">
             <a
               href="#"
-              className="absolute top-0 left-0 w-full h-full opacity-0 pointer-events-none
-"
+              className="absolute top-0 left-0 w-full h-full opacity-0 pointer-events-none"
             >
               .
             </a>
-            <div
-              className="bg-color absolute top-0 left-0 right-0 bottom-0 transform-origin-[50%_100%] transition-all duration-[600ms] ease-in-out overflow-hidden rounded-[16px]
-]
-"
-            >
-              <div
-                className="bg-hover block w-[230%] h-[230%] absolute bottom-0 left-1/2 transform translate-x-[-50%] translate-y-[50%] scale-0 opacity-100 rounded-full overflow-hidden transition-all duration-[500ms] ease-in-out
-"
-              ></div>
-            </div>
-            <div
-              className="outer-content overflow-hidden
 
- "
-            >
-              <div
-                className="inner-text mt-auto w-full relative z-[5] overflow-hidden transition-transform duration-[300ms] translate-y-[162px]
-
-
-"
-              >
+            <div className="outer-content overflow-hidden w-full">
+              <div className="inner-text mt-auto w-full relative z-[5] overflow-hidden transform transition-transform duration-[300ms] translate-y-[162px] group-hover:translate-y-0">
                 <div className="title-wrap">
                   <h4 className="text-[32px] not-italic font-semibold leading-[120%] text-white">
                     Creating Long Term Value
                   </h4>
-                  <div
-                    className="body-wrap overflow-hidden transition-[max-height] duration-[400ms] ease-in-out
-"
-                  >
-                    <p
-                      className="text-white font-montserrat text-[18px] font-normal leading-[27px] tracking-[0.02em] text-left
-"
-                    >
+                  <div className="body-wrap overflow-hidden transition-[max-height] duration-[400ms] ease-in-out">
+                    <p className="text-white font-montserrat text-[18px] font-normal leading-[27px] tracking-[0.02em] text-left">
                       We bring the collective decades of operational and
                       investment experience from across the Crosspoint team to
                       support our portfolio companies with their transformation
@@ -88,51 +57,24 @@ export default function CardWithText() {
               </div>
             </div>
           </div>
-          <div
-            className="card-dark-teal relative bg-[rgb(186,213,143)]
- max-w-[392px] w-[calc(33.333%-20px)] flex flex-wrap items-end p-[40px] rounded-[16px] mx-[10px] mb-[20px] transition-all duration-[600ms] ease-linear
-"
-          >
+
+          {/* Card 2 (repeat with different bg) */}
+          <div className="group relative bg-[rgb(186,213,143)] max-w-[392px] w-[calc(33.333%-20px)] flex flex-wrap items-end p-[40px] rounded-[16px] mx-[10px] mb-[20px] transition-all duration-[600ms] ease-linear hover:-translate-y-2">
             <a
               href="#"
-              className="absolute top-0 left-0 w-full h-full opacity-0 pointer-events-none
-"
+              className="absolute top-0 left-0 w-full h-full opacity-0 pointer-events-none"
             >
               .
             </a>
-            <div
-              className="bg-color absolute top-0 left-0 right-0 bottom-0 transform-origin-[50%_100%] transition-all duration-[600ms] ease-in-out overflow-hidden rounded-[16px]
-]
-"
-            >
-              <div
-                className="bg-hover block w-[230%] h-[230%] absolute bottom-0 left-1/2 transform translate-x-[-50%] translate-y-[50%] scale-0 opacity-100 rounded-full overflow-hidden transition-all duration-[500ms] ease-in-out
-"
-              ></div>
-            </div>
-            <div
-              className="outer-content overflow-hidden
 
- "
-            >
-              <div
-                className="inner-text mt-auto w-full relative z-[5] overflow-hidden transition-transform duration-[300ms] translate-y-[162px]
-
-
-"
-              >
+            <div className="outer-content overflow-hidden w-full">
+              <div className="inner-text mt-auto w-full relative z-[5] overflow-hidden transform transition-transform duration-[300ms] translate-y-[162px] group-hover:translate-y-0">
                 <div className="title-wrap">
                   <h4 className="text-[32px] not-italic font-semibold leading-[120%] text-white">
                     Creating Long Term Value
                   </h4>
-                  <div
-                    className="body-wrap overflow-hidden transition-[max-height] duration-[400ms] ease-in-out
-"
-                  >
-                    <p
-                      className="text-white font-montserrat text-[18px] font-normal leading-[27px] tracking-[0.02em] text-left
-"
-                    >
+                  <div className="body-wrap overflow-hidden transition-[max-height] duration-[400ms] ease-in-out">
+                    <p className="text-white font-montserrat text-[18px] font-normal leading-[27px] tracking-[0.02em] text-left">
                       We bring the collective decades of operational and
                       investment experience from across the Crosspoint team to
                       support our portfolio companies with their transformation

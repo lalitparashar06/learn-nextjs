@@ -1,21 +1,44 @@
 export default function BgSeaWater() {
   return (
-    <section
-      className="BgSeaWater relativebackground: -webkit-linear-gradient(315.42deg, #f6fcff 0.4%, #cde8f6 99.63%);
-"
-    >
+    <section className="BgSeaWater relative  bg-[linear-gradient(134.58deg,_#f6fcff_0.4%,_#cde8f6_99.63%)] overflow-hidden">
       <div
-        className="bg-image absolute left-0 bottom-0 w-full h-[52.2%]
+        className="bg-image absolute left-0 bottom-0  w-full h-[51.6%]
 "
       >
         <img
           src="/images/cta_light_background_image.png"
-          className="h-full"
+          className="h-full w-full"
         ></img>
-        <div
-          className="overlay w-[1600px] h-[409.113px] shrink-0 bg-[linear-gradient(270deg,_rgba(246,252,255,0)_0.04%,_rgba(246,252,255,0.9)_60.35%,_#F6FCFF_75.08%,_#F6FCFF_99.91%)]
-"
-        ></div>
+      </div>
+      <div className="container">
+        <div className="wrapper mb-[28px] flex items-center justify-between w-full gap-7">
+          <div className="text-wrap max-w-[624px] text-[white] z-10">
+            <h1 className="mb-[40px] text-[#1D2D40]  text-[88px] font-semibold leading-[110%]">
+              Connect with us today<span className="text-[#F2AD24]">.</span>
+            </h1>
+            <div className="btn inline-block items-center  justify-center gap-[10px] px-[20px] py-[12px] rounded-[100px] bg-[#00BFC8]">
+              <a href="#" className="inline-block ">
+                Contact us{" "}
+              </a>
+              <img
+                src="/images/Vector.png"
+                className="w-[16px] h-[12px] -rotate-80 "
+              ></img>
+            </div>
+          </div>
+          <div className="img-wrap relative translate-x-[48px] z-[1]">
+            <img
+              src="/images/cta-light-circle-image.png"
+              className=" relative"
+            ></img>
+            <div className="graphics absolute top-0 right-0 w-full h-full">
+              <img
+                src="/images/blue-pattern.svg"
+                className="h-auto w-full"
+              ></img>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
