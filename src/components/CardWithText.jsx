@@ -1,12 +1,12 @@
 export default function CardWithText() {
   return (
     <section
-      class="CardWithText  bg-white  py-[90px]
+      class="CardWithText  bg-white  pt-[90px] pb-[90px] px-0 overflow-hidden
 "
     >
       <div className="container">
         <div className="intro-wrap text-center max-w-[827px] mx-auto">
-          <h2 className="text-[64px] text-[black] leading-[120%] pb-[16px]">
+          <h2 className="text-[64px] text-[black] leading-[120%] pb-[16px] capitalize">
             Buyout<span className="text-[#F2AD24]">.</span>
           </h2>
           <p

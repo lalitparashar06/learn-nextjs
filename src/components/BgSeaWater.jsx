@@ -13,17 +13,13 @@ export default function BgSeaWater() {
       <div className="container">
         <div className="wrapper mb-[28px] flex items-center justify-between w-full gap-7">
           <div className="text-wrap max-w-[624px] text-[white] z-10">
-            <h1 className="mb-[40px] text-[#1D2D40]  text-[88px] font-semibold leading-[110%]">
+            <h1 className="mb-[40px] text-[#1D2D40]  text-[88px] font-semibold leading-[110%] capitalize">
               Connect with us today<span className="text-[#F2AD24]">.</span>
             </h1>
-            <div className="btn inline-block items-center  justify-center gap-[10px] px-[20px] py-[12px] rounded-[100px] bg-[#00BFC8]">
-              <a href="#" className="inline-block ">
+            <div className="btn inline-block items-center  justify-center gap-[10px]  rounded-[100px] bg-[#00BFC8] transition-all duration-[600ms] ease-linear hover:bg-[#1D2D40] hover:text-[white]">
+              <a href="#" className="inline-block relative px-[20px] py-[12px]">
                 Contact us{" "}
               </a>
-              <img
-                src="/images/Vector.png"
-                className="w-[16px] h-[12px] -rotate-80 "
-              ></img>
             </div>
           </div>
           <div className="img-wrap relative translate-x-[48px] z-[1]">

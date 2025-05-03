@@ -18,8 +18,8 @@ export default function ColTwoWithImage() {
         <div className="row-wrapper     mt-[412px]">
           <div className="outer-wrap relative flex items-center mb-[252px]">
             <div className="content-item w-[45%] relative">
-              <div className="inner-content  ">
-                <h2>
+              <div className="inner-content   ">
+                <h2 className="capitalize">
                   Growth Equity<span className="text-[#F2AD24]">.</span>
                 </h2>
                 <p className="">
@@ -56,7 +56,7 @@ export default function ColTwoWithImage() {
           </div>
           <div className="content-item w-[45%] relative ml-[10%]">
             <div className="inner-content ">
-              <h2>
+              <h2 className="capitalize">
                 Early Stage<span className="text-[#F2AD24]">.</span>
               </h2>
               <p className="">
@@ -67,7 +67,7 @@ export default function ColTwoWithImage() {
                 walk the path of building and scaling a business and the
                 relentless execution that is required day in and day out.
               </p>
-              <div className="btn mt-[40px] flex w-[164px] px-[20px] py-[12px] justify-center items-center gap-[10px] rounded-[100px] border-2 border-[var(--Primary-White,#FFF)]">
+              <div className="btn mt-[40px] flex w-[164px] px-[20px] py-[12px] justify-center items-center gap-[10px] rounded-[100px] border-2 border-[var(--Primary-White,#FFF)]  transition-all duration-[600ms] ease-linear hover:bg-red-500">
                 <a href="#">Learn more</a>
               </div>
             </div>
