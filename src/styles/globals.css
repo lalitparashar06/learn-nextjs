@@ -363,3 +363,51 @@ p {
     padding: 40px 0;
   }
 }
+
+.btnPrimary:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: calc(100% + 50%);
+  height: calc(100% + 250%);
+  border-radius: 50%;
+  left: 50%;
+  transform: translateZ(0) translate(-50%, 50%) scale(0);
+  transition: all 0.3s linear;
+}
+
+.btnPrimary:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 12px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url(/images/arrow-black.svg) no-repeat;
+  background-size: 100% 100%;
+  transition: all 0.3s linear;
+}
+
+.CardWithText :after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 42%;
+  /* background-color: #1d2d40; */
+  z-index: -1;
+}
+
+@media screen and (max-width: 595px) {
+  .btnPrimary :after {
+    width: 9px;
+    height: 12px;
+    right: 7px;
+    top: 56%;
+  }
+}
