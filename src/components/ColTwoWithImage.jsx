@@ -19,10 +19,10 @@ export default function ColTwoWithImage() {
           <div className="outer-wrap relative flex items-center mb-[252px] z-10 phablet:flex-wrap phablet:mb-[87px] phone:flex-wrap phone:mb-[80px] xs:flex-wrap xs:mb-[87px]">
             <div className="content-item w-[45%] relative phablet:w-full phone:w-full xs:w-full">
               <div className="inner-content   ">
-                <h2 className="capitalize">
+                <h2 className="capitalize text-white">
                   Growth Equity<span className="text-[#F2AD24]">.</span>
                 </h2>
-                <p className="">
+                <p className="text-white pt-[20px] max-w-[584px] text-[18px] ">
                   We help companies with disruptive technology preserve their
                   entrepreneurial spirit by supporting their culture of
                   innovation and agility, while providing industry expertise,
@@ -47,10 +47,10 @@ export default function ColTwoWithImage() {
           <div className="outer-wrap relative flex items-center flex-row-reverse  mb-[156px]  z-10 phablet:flex-wrap phablet:mb-[80px] phone:flex-wrap xs:flex-wrap  xs:mb-[60px] mb-[87px]">
             <div className="content-item w-[45%] relative ml-[10%] phablet:w-full phablet:ml-[0] phone:w-full phone:ml-[0]  xs:w-full xs:ml-[0]">
               <div className="inner-content mb-[30px]">
-                <h2 className="capitalize">
+                <h2 className="capitalize text-[white]">
                   Early Stage<span className="text-[#F2AD24]">.</span>
                 </h2>
-                <p className="">
+                <p className="text-white pt-[20px] max-w-[584px] text-[18px]">
                   We empower founders to achieve their highest potential by
                   supporting them with capital, sector expertise and operational
                   experience. Our team's collection of operating and
