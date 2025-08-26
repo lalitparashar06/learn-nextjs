@@ -1,3 +1,4 @@
+import MarioHeader from "@/components/MarioHeader";
 import Home from "@/components/Home";
 import VideoContent from "@/components/VideoContent";
 import TextCount from "@/components/TextCount";
@@ -10,6 +11,7 @@ import React from "react";
 export default function Index() {
   return (
     <>
+      <MarioHeader />
       <Home />
       <VideoContent />
       <TextCount />

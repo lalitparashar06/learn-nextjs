@@ -1,3 +1,4 @@
+import MarioHeader from "@/components/MarioHeader";
 import HeroBanner from "@/components/HeroBanner";
 import IntroBlock from "@/components/IntroBlock";
 import ColThreeCard from "@/components/ColThreeCard";
@@ -11,6 +12,7 @@ export default function AboutUs() {
   };
   return (
     <div>
+      <MarioHeader />
       <HeroBanner overlay={overlay} heroBannerData={heroBannerData} />
       <ColThreeCard />
       <IntroBlock />
