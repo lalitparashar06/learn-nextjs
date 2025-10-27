@@ -1,0 +1,13 @@
+.Bg-waves:before {
+  content: "";
+  position: absolute;
+  top: -174px;
+  bottom: 0px;
+  width: 100%;
+  left: 0px;
+  height: auto;
+  opacity: 0.3;
+  mix-blend-mode: soft-light;
+  margin: auto;
+  background-image: url(/images/bg-waves-graphic.png);
+}
