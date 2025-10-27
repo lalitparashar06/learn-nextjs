@@ -1,340 +1,237 @@
-// import React from "react";
+// import React, { useState, useEffect } from "react";
+
 // export default function LogoTabGrids() {
+//   const [activeTab, setActiveTab] = useState(0);
+
+//   // Tab data with icons, content, and images
+//   const tabs = [
+//     {
+//       name: "Podcast",
+//       icon: (
+//         <svg
+//           width="40"
+//           height="40"
+//           viewBox="0 0 40 40"
+//           fill="none"
+//           xmlns="http://www.w3.org/2000/svg"
+//         >
+//           <g clipPath="url(#clip0_105_6842)">
+//             <path
+//               d="M31.6668 16.6666H28.8335C28.8335 21.6666 24.6002 25.1666 20.0002 25.1666C15.4002 25.1666 11.1668 21.6666 11.1668 16.6666H8.3335C8.3335 22.35 12.8668 27.05 18.3335 27.8666V33.3333H21.6668V27.8666C27.1335 27.05 31.6668 22.35 31.6668 16.6666ZM25.0002 40H28.3335V36.6666H25.0002M18.3335 40H21.6668V36.6666H18.3335M20.0002 21.6666C21.3262 21.6666 22.598 21.1398 23.5357 20.2022C24.4734 19.2645 25.0002 17.9927 25.0002 16.6666V6.66663C25.0002 5.34054 24.4734 4.06877 23.5357 3.13109C22.598 2.19341 21.3262 1.66663 20.0002 1.66663C18.6741 1.66663 17.4023 2.19341 16.4646 3.13109C15.5269 4.06877 15.0002 5.34054 15.0002 6.66663V16.6666C15.0002 17.9927 15.5269 19.2645 16.4646 20.2022C17.4023 21.1398 18.6741 21.6666 20.0002 21.6666ZM11.6668 40H15.0002V36.6666H11.6668V40Z"
+//               fill="#fff"
+//             />
+//           </g>
+//           <defs>
+//             <clipPath id="clip0_105_6842">
+//               <rect width="40" height="40" fill="white" />
+//             </clipPath>
+//           </defs>
+//         </svg>
+//       ),
+
+//       desc: "We managed podcast campaigns before the industry started publicly recording its revenue and fought our way to the top of the hill. Today, our clients comprise half of the top podcast advertisers, who trust us with campaigns that generate measurable growth. With over 200,000 brand integrations placed annually, we handle everything: host vetting, creative development, media buying, and attribution modeling. Every placement is tracked, every dollar measured, every campaign optimized for your lowest possible customer acquisition cost and highest ROAS.",
+//       img: "/images/Podcast-3-scaled.jpg",
+//       alt: "Car",
+//     },
+//     {
+//       name: "Audio",
+//       icon: (
+//         <svg
+//           width="40"
+//           height="40"
+//           viewBox="0 0 40 40"
+//           fill="none"
+//           xmlns="http://www.w3.org/2000/svg"
+//         >
+//           <path
+//             d="M33.3335 10C34.2176 10 35.0654 10.3512 35.6905 10.9763C36.3156 11.6015 36.6668 12.4493 36.6668 13.3334V33.3334C36.6668 34.2174 36.3156 35.0653 35.6905 35.6904C35.0654 36.3155 34.2176 36.6667 33.3335 36.6667H6.66683C5.78277 36.6667 4.93493 36.3155 4.30981 35.6904C3.68469 35.0653 3.3335 34.2174 3.3335 33.3334V13.3334C3.3335 11.9167 4.21683 10.7 5.46683 10.2167L26.1835 1.66669L27.4502 4.71669L14.7168 10H33.3335ZM33.3335 13.3334H6.66683V20H26.6668V16.6667H30.0002V20H33.3335V13.3334ZM11.6668 23.3334C10.3407 23.3334 9.06898 23.8601 8.1313 24.7978C7.19361 25.7355 6.66683 27.0073 6.66683 28.3334C6.66683 29.6594 7.19361 30.9312 8.1313 31.8689C9.06898 32.8066 10.3407 33.3334 11.6668 33.3334C12.9929 33.3334 14.2647 32.8066 15.2024 31.8689C16.14 30.9312 16.6668 29.6594 16.6668 28.3334C16.6668 27.0073 16.14 25.7355 15.2024 24.7978C14.2647 23.8601 12.9929 23.3334 11.6668 23.3334Z"
+//             fill="#ECF0F7"
+//           ></path>
+//         </svg>
+//       ),
+//       desc: "From national radio to streaming and programmatic audio, we combine the proven power of legacy formats with the precision of today’s targeting. We use audio as a secret weapon—activating “Theater of the Mind” to move audiences through story and sound. Our proprietary Audiolytics™ system ensures every word is tailored to audience behavior and business goals—so your creative isn’t just heard, it performs.",
+//       img: "/images/Audio-1.jpg",
+//       alt: "Manage banner",
+//     },
+//     {
+//       name: "Creator",
+//       icon: (
+//         <svg
+//           width="40"
+//           height="40"
+//           viewBox="0 0 40 40"
+//           fill="none"
+//           xmlns="http://www.w3.org/2000/svg"
+//         >
+//           <path
+//             d="M27.0502 30L20.0002 25.75L12.9502 30L14.8168 21.9833L8.60016 16.6L16.8002 15.9L20.0002 8.33331L23.2002 15.8833L31.4002 16.5833L25.1835 21.9666L27.0502 30ZM20.0002 3.33331C10.7835 3.33331 3.3335 10.8333 3.3335 20C3.3335 24.4203 5.08944 28.6595 8.21505 31.7851C9.76269 33.3327 11.6 34.5604 13.6221 35.398C15.6442 36.2356 17.8115 36.6666 20.0002 36.6666C24.4204 36.6666 28.6597 34.9107 31.7853 31.7851C34.9109 28.6595 36.6668 24.4203 36.6668 20C36.6668 17.8113 36.2357 15.644 35.3982 13.6219C34.5606 11.5998 33.3329 9.76251 31.7853 8.21487C30.2376 6.66722 28.4003 5.43957 26.3782 4.60199C24.3561 3.76441 22.1889 3.33331 20.0002 3.33331Z"
+//             fill="#ECF0F7"
+//           ></path>
+//         </svg>
+//       ),
+//       desc: "We find, negotiate, and license the right creator talent as an extension of your company, amassing brand equity while driving immediate performance. From podcasters to YouTubers to 360-degree campaigns, our talent partnerships are custom-built to your growth model. No wasted impressions, just direct access, optimized usage, and accountable ROI.",
+//       img: "/images/Creator-Image-tab-grid.jpg",
+//       alt: "Manage banner",
+//     },
+//     {
+//       name: "Programmatic",
+//       icon: (
+//         <svg
+//           width="40"
+//           height="40"
+//           viewBox="0 0 40 40"
+//           fill="none"
+//           xmlns="http://www.w3.org/2000/svg"
+//         >
+//           <path
+//             d="M15 21.6667V18.3333H18.3333V21.6667M18.3333 25V21.6667H21.6667V25M18.3333 18.3333V15H21.6667V18.3333M15 15V11.6667H18.3333V15M15 28.3333V25H18.3333V28.3333M5 8.33333V31.6667C5 33.5 6.5 35 8.33333 35H31.6667C33.5 35 35 33.5 35 31.6667V8.33333C35 6.5 33.5 5 31.6667 5H8.33333C6.5 5 5 6.5 5 8.33333ZM30 25V28.3333H26.6667V25M30 18.3333V21.6667H26.6667V18.3333M30 11.6667V15H26.6667V11.6667M18.3333 8.33333V11.6667H21.6667V8.33333H25V11.6667H21.6667V15H25V18.3333H21.6667V21.6667H25V25H21.6667V28.3333H25V31.6667H21.6667V28.3333H18.3333V31.6667H8.33333V8.33333H18.3333Z"
+//             fill="#ECF0F7"
+//           ></path>
+//         </svg>
+//       ),
+//       desc: "Programmatic audio is exploding, but most brands burn their budget before unlocking scale or performance. We help you bypass the learning curve with precision-built campaigns that blend discovery, retargeting, and conversion-engineered for CAC efficiency and full-funnel ROI. Our always-on model uncovers high-value audiences, allows high-volume creative testing, and feeds insights back into your podcast and creator strategy so nothing is wasted and everything gets smarter.",
+//       img: "/images/Programmatic-1.jpg",
+//       alt: "Manage banner",
+//     },
+//     // {
+//     //   name: "Influencer",
+//     //   icon: (
+//     //     <svg
+//     //       width="40"
+//     //       height="40"
+//     //       viewBox="0 0 40 40"
+//     //       fill="none"
+//     //       xmlns="http://www.w3.org/2000/svg"
+//     //     >
+//     //       <path
+//     //         d="M27.0502 30L20.0002 25.75L12.9502 30L14.8168 21.9833L8.60016 16.6L16.8002 15.9L20.0002 8.33331L23.2002 15.8833L31.4002 16.5833L25.1835 21.9666L27.0502 30ZM20.0002 3.33331C10.7835 3.33331 3.3335 10.8333 3.3335 20C3.3335 24.4203 5.08944 28.6595 8.21505 31.7851C9.76269 33.3327 11.6 34.5604 13.6221 35.398C15.6442 36.2356 17.8115 36.6666 20.0002 36.6666C24.4204 36.6666 28.6597 34.9107 31.7853 31.7851C34.9109 28.6595 36.6668 24.4203 36.6668 20C36.6668 17.8113 36.2357 15.644 35.3982 13.6219C34.5606 11.5998 33.3329 9.76251 31.7853 8.21487C30.2376 6.66722 28.4003 5.43957 26.3782 4.60199C24.3561 3.76441 22.1889 3.33331 20.0002 3.33331Z"
+//     //         fill="#ECF0F7"
+//     //       />
+//     //     </svg>
+//     //   ),
+//     //   desc: "There are over 2.5 million podcasts, in __ countries and in more than 100 languages. With our proprietary podcast performance data and aiWARE-enabled actionable intelligence, Veritone One has the knowledge, experience, technology, and leverage to help brands navigate this bustling landscape.",
+//     //   img: "/images/pink-black-car.png",
+//     //   alt: "Manage banner",
+//     // },
+//     {
+//       name: "International",
+//       icon: (
+//         <svg
+//           width="40"
+//           height="40"
+//           viewBox="0 0 40 40"
+//           fill="none"
+//           xmlns="http://www.w3.org/2000/svg"
+//         >
+//           <path
+//             d="M15 21.6667V18.3333H18.3333V21.6667M18.3333 25V21.6667H21.6667V25M18.3333 18.3333V15H21.6667V18.3333M15 15V11.6667H18.3333V15M15 28.3333V25H18.3333V28.3333M5 8.33333V31.6667C5 33.5 6.5 35 8.33333 35H31.6667C33.5 35 35 33.5 35 31.6667V8.33333C35 6.5 33.5 5 31.6667 5H8.33333C6.5 5 5 6.5 5 8.33333ZM30 25V28.3333H26.6667V25M30 18.3333V21.6667H26.6667V18.3333M30 11.6667V15H26.6667V11.6667M18.3333 8.33333V11.6667H21.6667V8.33333H25V11.6667H21.6667V15H25V18.3333H21.6667V21.6667H25V25H21.6667V28.3333H25V31.6667H21.6667V28.3333H18.3333V31.6667H8.33333V8.33333H18.3333Z"
+//             fill="#ECF0F7"
+//           />
+//         </svg>
+//       ),
+//       desc: "International campaigns often sound good on paper, but fail in execution. We’ve built a full-stack system for audio across LATAM, APAC, MENA, and Europe: 160+ vetted local partners, transcreation tuned for resonance, and attribution you can actually use. With teams on the ground across six continents and a centralized performance model, we align costs, usage rights, and reporting to your global strategy without regional chaos. You’ll sound fluent from day one.",
+//       img: "/images/International_image.jpg",
+//       alt: "Technology",
+//     },
+//   ];
+
+//   // Auto-cycle tabs every 50 seconds
+//   useEffect(() => {
+//     const tabCycle = setInterval(() => {
+//       setActiveTab((prev) => (prev + 1) % tabs.length);
+//     }, 50000);
+//     return () => clearInterval(tabCycle);
+//   }, []);
+
 //   return (
-//     <section className="logo-tab-grids bg-[rgb(245,92,92)] overflow-visible lg:pt-[60px]">
+//     <section className="logo-tab-grids bg-[#315a67] overflow-visible lg:pt-15">
 //       <div className="container mx-auto max-w-[834px]">
-//         <div className="item-wrap relative z-[2] flex bg-[#2D3748] p-[80px_62px_80px_50px] md:p-[50px] sm:p-[40px] xs:p-[25px] rounded-lg">
-//           <div className="list-wrap w-[30%] pr-[30px] lg:flex lg:flex-wrap lg:float-left md:pr-[10px] md:w-full sm:w-full">
-//             <div className="list-item w-full relative mb-[70px] last:mb-0 md:mb-[15px] lg:cursor-pointer md:cursor-pointer md:p-0 md:opacity-100">
-//               <div className="tab-item relative flex items-center pl-[31px] xs:pl-5 md:pb-5 md:cursor-pointer after:content-[''] after:absolute after:top-5 after:right-0 after:w-4 after:h-[23px] after:bg-[url('/wp-content/themes/veritoneone/dist/images/right-arrow.svg')] after:bg-no-repeat after:bg-[length:100%] after:rotate-90 after:opacity-0 after:transition-all after:duration-400 md:after:opacity-100 xs:after:top-[6px]">
-//                 <div className="img-wrap max-w-10 max-h-10 overflow-hidden xs:max-w-[30px] xs:max-h-[30px]">
-//                   <svg
-//                     width="40"
-//                     height="40"
-//                     viewBox="0 0 40 40"
-//                     fill="none"
-//                     xmlns="http://www.w3.org/2000/svg"
-//                     className="w-full h-full object-cover"
+//         <div className="item-wrap relative z-[2] flex bg-[#333333] py-20 pr-[62px] pl-[50px] rounded-lg md:p-12 sm:p-10 xs:p-6">
+//           <div className="list-wrap w-[30%] pr-7 lg:flex lg:flex-wrap lg:float-left md:pr-2.5 md:w-full">
+//             {tabs.map((tab, index) => (
+//               <div
+//                 key={tab.name}
+//                 className={`w-full relative mb-[70px] last:mb-0 last:border-b-0 last:pb-0 md:mb-3.75 lg:cursor-pointer md:p-0 md:opacity-100 ${
+//                   activeTab === index ? "active" : ""
+//                 }`}
+//                 onClick={() => setActiveTab(index)}
+//               >
+//                 <div
+//                   className={`tab-item relative  cursor-pointer flex items-center pl-[31px] md:pb-5 md:cursor-pointer xs:pl-5 after:content-[''] after:absolute after:top-5 after:right-0 after:w-4 after:h-[23px] after:bg-[url('/images/right-arrow.svg')] after:bg-no-repeat after:bg-contain after:opacity-0 after:transition-all after:duration-400 md:after:opacity-100 xs:after:top-[6px] ${
+//                     activeTab === index ? "mobile-active" : ""
+//                   } ${
+//                     activeTab === index
+//                       ? "after:rotate-[270deg]"
+//                       : "after:rotate-90"
+//                   }`}
+//                 >
+//                   <div className="img-wrap max-w-10 max-h-10 overflow-hidden xs:max-w-[30px] xs:max-h-[30px]">
+//                     {React.cloneElement(tab.icon, {
+//                       className: `w-full h-full object-cover ${
+//                         activeTab === index
+//                           ? "[&>path]:fill-[#2ee5a8] [&>g>path]:fill-[#2ee5a8]"
+//                           : ""
+//                       }`,
+//                     })}
+//                   </div>
+//                   <h4
+//                     className={`text-[32px] font-medium ml-[23px] mb-0 md:text-[22px] sm:text-[20px] ${
+//                       activeTab === index ? "text-[#2ee5a8]" : "text-white"
+//                     }`}
 //                   >
-//                     <g clip-path="url(#clip0_105_6842)">
-//                       <path
-//                         d="M31.6668 16.6666H28.8335C28.8335 21.6666 24.6002 25.1666 20.0002 25.1666C15.4002 25.1666 11.1668 21.6666 11.1668 16.6666H8.3335C8.3335 22.35 12.8668 27.05 18.3335 27.8666V33.3333H21.6668V27.8666C27.1335 27.05 31.6668 22.35 31.6668 16.6666ZM25.0002 40H28.3335V36.6666H25.0002M18.3335 40H21.6668V36.6666H18.3335M20.0002 21.6666C21.3262 21.6666 22.598 21.1398 23.5357 20.2022C24.4734 19.2645 25.0002 17.9927 25.0002 16.6666V6.66663C25.0002 5.34054 24.4734 4.06877 23.5357 3.13109C22.598 2.19341 21.3262 1.66663 20.0002 1.66663C18.6741 1.66663 17.4023 2.19341 16.4646 3.13109C15.5269 4.06877 15.0002 5.34054 15.0002 6.66663V16.6666C15.0002 17.9927 15.5269 19.2645 16.4646 20.2022C17.4023 21.1398 18.6741 21.6666 20.0002 21.6666ZM11.6668 40H15.0002V36.6666H11.6668V40Z"
-//                         fill="#fff"
-//                       />
-//                     </g>
-//                     <defs>
-//                       <clipPath id="clip0_105_6842">
-//                         <rect width="40" height="40" fill="white" />
-//                       </clipPath>
-//                     </defs>
-//                   </svg>
+//                     {tab.name}
+//                   </h4>
 //                 </div>
-//                 <h4 className="text-[32px] text-white font-medium ml-[23px] mb-0 md:text-[22px] sm:text-[20px]">
-//                   Podcast
-//                 </h4>
+//                 {activeTab === index && (
+//                   <div className="absolute border-l-[10px] border-[#2ee5a8] top-[-20px] left-3 bottom-0 h-[79px] md:top-[-6px] md:h-[50px] md:left-0 xs:h-[46px] xs:left-0" />
+//                 )}
 //               </div>
-//             </div>
-//             <div className="list-item w-full relative mb-[70px] last:mb-0 md:mb-[15px] lg:cursor-pointer md:cursor-pointer md:p-0 md:opacity-100">
-//               <div className="tab-item relative flex items-center pl-[31px] xs:pl-5 md:pb-5 md:cursor-pointer after:content-[''] after:absolute after:top-5 after:right-0 after:w-4 after:h-[23px] after:bg-[url('/wp-content/themes/veritoneone/dist/images/right-arrow.svg')] after:bg-no-repeat after:bg-[length:100%] after:rotate-90 after:opacity-0 after:transition-all after:duration-400 md:after:opacity-100 xs:after:top-[6px]">
-//                 <div className="img-wrap max-w-10 max-h-10 overflow-hidden xs:max-w-[30px] xs:max-h-[30px]">
-//                   <svg
-//                     width="40"
-//                     height="40"
-//                     viewBox="0 0 40 40"
-//                     fill="none"
-//                     xmlns="http://www.w3.org/2000/svg"
-//                     className="w-full h-full object-cover"
-//                   >
-//                     <path
-//                       d="M16.6668 25L25.3168 20L16.6668 15V25ZM35.9335 11.95C36.1502 12.7334 36.3002 13.7834 36.4002 15.1167C36.5168 16.45 36.5668 17.6 36.5668 18.6L36.6668 20C36.6668 23.65 36.4002 26.3334 35.9335 28.05C35.5168 29.55 34.5502 30.5167 33.0502 30.9334C32.2668 31.15 30.8335 31.3 28.6335 31.4C26.4668 31.5167 24.4835 31.5667 22.6502 31.5667L20.0002 31.6667C13.0168 31.6667 8.66683 31.4 6.95016 30.9334C5.45016 30.5167 4.4835 29.55 4.06683 28.05C3.85016 27.2667 3.70016 26.2167 3.60016 24.8834C3.4835 23.55 3.4335 22.4 3.4335 21.4L3.3335 20C3.3335 16.35 3.60016 13.6667 4.06683 11.95C4.4835 10.45 5.45016 9.48337 6.95016 9.06671C7.7335 8.85004 9.16683 8.70004 11.3668 8.60004C13.5335 8.48337 15.5168 8.43337 17.3502 8.43337L20.0002 8.33337C26.9835 8.33337 31.3335 8.60004 33.0502 9.06671C34.5502 9.48337 35.5168 10.45 35.9335 11.95Z"
-//                       fill="#ECF0F7"
-//                     />
-//                   </svg>
-//                 </div>
-//                 <h4 className="text-[32px] text-white font-medium ml-[23px] mb-0 md:text-[22px] sm:text-[20px]">
-//                   youtube
-//                 </h4>
-//               </div>
-//             </div>
-//             <div className="list-item w-full relative mb-[70px] last:mb-0 md:mb-[15px] lg:cursor-pointer md:cursor-pointer md:p-0 md:opacity-100">
-//               <div className="tab-item relative flex items-center pl-[31px] xs:pl-5 md:pb-5 md:cursor-pointer after:content-[''] after:absolute after:top-5 after:right-0 after:w-4 after:h-[23px] after:bg-[url('/wp-content/themes/veritoneone/dist/images/right-arrow.svg')] after:bg-no-repeat after:bg-[length:100%] after:rotate-90 after:opacity-0 after:transition-all after:duration-400 md:after:opacity-100 xs:after:top-[6px]">
-//                 <div className="img-wrap max-w-10 max-h-10 overflow-hidden xs:max-w-[30px] xs:max-h-[30px]">
-//                   <svg
-//                     width="40"
-//                     height="40"
-//                     viewBox="0 0 40 40"
-//                     fill="none"
-//                     xmlns="http://www.w3.org/2000/svg"
-//                     className="w-full h-full object-cover"
-//                   >
-//                     <path
-//                       d="M33.3335 10C34.2176 10 35.0654 10.3512 35.6905 10.9763C36.3156 11.6015 36.6668 12.4493 36.6668 13.3334V33.3334C36.6668 34.2174 36.3156 35.0653 35.6905 35.6904C35.0654 36.3155 34.2176 36.6667 33.3335 36.6667H6.66683C5.78277 36.6667 4.93493 36.3155 4.30981 35.6904C3.68469 35.0653 3.3335 34.2174 3.3335 33.3334V13.3334C3.3335 11.9167 4.21683 10.7 5.46683 10.2167L26.1835 1.66669L27.4502 4.71669L14.7168 10H33.3335ZM33.3335 13.3334H6.66683V20H26.6668V16.6667H30.0002V20H33.3335V13.3334ZM11.6668 23.3334C10.3407 23.3334 9.06898 23.8601 8.1313 24.7978C7.19361 25.7355 6.66683 27.0073 6.66683 28.3334C6.66683 29.6594 7.19361 30.9312 8.1313 31.8689C9.06898 32.8066 10.3407 33.3334 11.6668 33.3334C12.9929 33.3334 14.2647 32.8066 15.2024 31.8689C16.14 30.9312 16.6668 29.6594 16.6668 28.3334C16.6668 27.0073 16.14 25.7355 15.2024 24.7978C14.2647 23.8601 12.9929 23.3334 11.6668 23.3334Z"
-//                       fill="#ECF0F7"
-//                     />
-//                   </svg>
-//                 </div>
-//                 <h4 className="text-[32px] text-white font-medium ml-[23px] mb-0 md:text-[22px] sm:text-[20px]">
-//                   Radio
-//                 </h4>
-//               </div>
-//             </div>
-//             <div className="list-item w-full relative mb-[70px] last:mb-0 md:mb-[15px] lg:cursor-pointer md:cursor-pointer md:p-0 md:opacity-100">
-//               <div className="tab-item relative flex items-center pl-[31px] xs:pl-5 md:pb-5 md:cursor-pointer after:content-[''] after:absolute after:top-5 after:right-0 after:w-4 after:h-[23px] after:bg-[url('/wp-content/themes/veritoneone/dist/images/right-arrow.svg')] after:bg-no-repeat after:bg-[length:100%] after:rotate-90 after:opacity-0 after:transition-all after:duration-400 md:after:opacity-100 xs:after:top-[6px]">
-//                 <div className="img-wrap max-w-10 max-h-10 overflow-hidden xs:max-w-[30px] xs:max-h-[30px]">
-//                   <svg
-//                     width="40"
-//                     height="40"
-//                     viewBox="0 0 40 40"
-//                     fill="none"
-//                     xmlns="http://www.w3.org/2000/svg"
-//                     className="w-full h-full object-cover"
-//                   >
-//                     <path
-//                       d="M34.9998 28.3333H4.99984V8.33333H34.9998M34.9998 5H4.99984C4.11578 5 3.26794 5.35119 2.64281 5.97631C2.01769 6.60143 1.6665 7.44928 1.6665 8.33333V28.3333C1.6665 29.2174 2.01769 30.0652 2.64281 30.6904C3.26794 31.3155 4.11578 31.6667 4.99984 31.6667H13.3332V35H26.6665V31.6667H34.9998C35.8839 31.6667 36.7317 31.3155 37.3569 30.6904C37.982 30.0652 38.3332 29.2174 38.3332 28.3333V8.33333C38.3332 7.44928 37.982 6.60143 37.3569 5.97631C36.7317 5.35119 35.8839 5 34.9998 5Z"
-//                       fill="#ECF0F7"
-//                     />
-//                   </svg>
-//                 </div>
-//                 <h4 className="text-[32px] text-white font-medium ml-[23px] mb-0 md:text-[22px] sm:text-[20px]">
-//                   Streaming
-//                 </h4>
-//               </div>
-//             </div>
-//             <div className="list-item w-full relative mb-[70px] last:mb-0 md:mb-[15px] lg:cursor-pointer md:cursor-pointer md:p-0 md:opacity-100">
-//               <div className="tab-item relative flex items-center pl-[31px] xs:pl-5 md:pb-5 md:cursor-pointer after:content-[''] after:absolute after:top-5 after:right-0 after:w-4 after:h-[23px] after:bg-[url('/wp-content/themes/veritoneone/dist/images/right-arrow.svg')] after:bg-no-repeat after:bg-[length:100%] after:rotate-90 after:opacity-0 after:transition-all after:duration-400 md:after:opacity-100 xs:after:top-[6px]">
-//                 <div className="img-wrap max-w-10 max-h-10 overflow-hidden xs:max-w-[30px] xs:max-h-[30px]">
-//                   <svg
-//                     width="40"
-//                     height="40"
-//                     viewBox="0 0 40 40"
-//                     fill="none"
-//                     xmlns="http://www.w3.org/2000/svg"
-//                     className="w-full h-full object-cover"
-//                   >
-//                     <path
-//                       d="M27.0502 30L20.0002 25.75L12.9502 30L14.8168 21.9833L8.60016 16.6L16.8002 15.9L20.0002 8.33331L23.2002 15.8833L31.4002 16.5833L25.1835 21.9666L27.0502 30ZM20.0002 3.33331C10.7835 3.33331 3.3335 10.8333 3.3335 20C3.3335 24.4203 5.08944 28.6595 8.21505 31.7851C9.76269 33.3327 11.6 34.5604 13.6221 35.398C15.6442 36.2356 17.8115 36.6666 20.0002 36.6666C24.4204 36.6666 28.6597 34.9107 31.7853 31.7851C34.9109 28.6595 36.6668 24.4203 36.6668 20C36.6668 17.8113 36.2357 15.644 35.3982 13.6219C34.5606 11.5998 33.3329 9.76251 31.7853 8.21487C30.2376 6.66722 28.4003 5.43957 26.3782 4.60199C24.3561 3.76441 22.1889 3.33331 20.0002 3.33331Z"
-//                       fill="#ECF0F7"
-//                     />
-//                   </svg>
-//                 </div>
-//                 <h4 className="text-[32px] text-white font-medium ml-[23px] mb-0 md:text-[22px] sm:text-[20px]">
-//                   Influencer
-//                 </h4>
-//               </div>
-//             </div>
-//             <div className="list-item w-full relative mb-[70px] last:mb-0 md:mb-[15px] lg:cursor-pointer md:cursor-pointer md:p-0 md:opacity-100">
-//               <div className="tab-item relative flex items-center pl-[31px] xs:pl-5 md:pb-5 md:cursor-pointer after:content-[''] after:absolute after:top-5 after:right-0 after:w-4 after:h-[23px] after:bg-[url('/wp-content/themes/veritoneone/dist/images/right-arrow.svg')] after:bg-no-repeat after:bg-[length:100%] after:rotate-90 after:opacity-0 after:transition-all after:duration-400 md:after:opacity-100 xs:after:top-[6px]">
-//                 <div className="img-wrap max-w-10 max-h-10 overflow-hidden xs:max-w-[30px] xs:max-h-[30px]">
-//                   <svg
-//                     width="40"
-//                     height="40"
-//                     viewBox="0 0 40 40"
-//                     fill="none"
-//                     xmlns="http://www.w3.org/2000/svg"
-//                     className="w-full h-full object-cover"
-//                   >
-//                     <path
-//                       d="M15 21.6667V18.3333H18.3333V21.6667M18.3333 25V21.6667H21.6667V25M18.3333 18.3333V15H21.6667V18.3333M15 15V11.6667H18.3333V15M15 28.3333V25H18.3333V28.3333M5 8.33333V31.6667C5 33.5 6.5 35 8.33333 35H31.6667C33.5 35 35 33.5 35 31.6667V8.33333C35 6.5 33.5 5 31.6667 5H8.33333C6.5 5 5 6.5 5 8.33333ZM30 25V28.3333H26.6667V25M30 18.3333V21.6667H26.6667V18.3333M30 11.6667V15H26.6667V11.6667M18.3333 8.33333V11.6667H21.6667V8.33333H25V11.6667H21.6667V15H25V18.3333H21.6667V21.6667H25V25H21.6667V28.3333H25V31.6667H21.6667V28.3333H18.3333V31.6667H8.33333V8.33333H18.3333Z"
-//                       fill="#ECF0F7"
-//                     />
-//                   </svg>
-//                 </div>
-//                 <h4 className="text-[32px] text-white font-medium ml-[23px] mb-0 md:text-[22px] sm:text-[20px]">
-//                   Digital
-//                 </h4>
-//               </div>
-//             </div>
+//             ))}
 //           </div>
-//           <div className="column-wrap w-[70%] pl-[7px] rounded-lg min-h-[553px] h-full lg:h-auto md:h-auto md:block">
-//             <div className="column-item hidden h-full mt-5 md:block active:flex">
-//               <div className="text-wrap relative w-[51%] bg-white p-[58px_30px_94px_31px] lg:w-[45%] md:w-full md:mt-0 md:p-[30px_20px]">
-//                 <div className="icon-wrap relative max-w-[75px] h-[75px] overflow-hidden inline-block md:max-w-[60px] md:max-h-[60px] sm:max-w-[50px] sm:max-h-[50px] xs:max-w-[40px] xs:h-[40px] z-[2] w-full">
+//           <div className="column-wrap w-[70%] pl-[7px] rounded-lg min-h-[553px] h-full md:h-auto md:block">
+//             {tabs.map((tab, index) => (
+//               <div
+//                 key={tab.name}
+//                 className={`column-item ${
+//                   activeTab === index ? "flex" : "hidden"
+//                 } h-full mt-5 md:block`}
+//               >
+//                 <div className="text-wrap relative w-[51%] min-h-[700px] bg-white p-[58px_30px_94px_31px] lg:w-[45%] md:w-full md:p-[30px_20px] overflow-hidden">
+//                   <div className="icon-wrap relative max-w-[75px] h-[75px] overflow-hidden z-[2] w-full inline-block md:max-w-[60px] md:max-h-[60px] sm:max-w-[50px] sm:max-h-[50px] xs:max-w-10 xs:h-10">
+//                     <img
+//                       src="/images/microphone-icon.svg"
+//                       alt="Microphone settings"
+//                       className="w-full h-full object-contain"
+//                       onError={() =>
+//                         console.error("Failed to load microphone icon")
+//                       }
+//                       onLoad={() => console.log("Loaded microphone icon")}
+//                     />
+//                   </div>
+//                   <div className="inner-text w-full my-[30px]">
+//                     <p className="text-lg font-light text-[#333333] leading-[1.6] md:p-0">
+//                       {tab.desc}
+//                     </p>
+//                   </div>
+//                   <div className="btn-wrap absolute bottom-[59px] left-[30px] md:static md:mt-[30px]">
+//                     <a href="#" className="link-common">
+//                       <span className="hover:text-[red]">Learn More</span>
+//                     </a>
+//                   </div>
+//                 </div>
+//                 <div className="img-item w-[70%] overflow-hidden  min-h-full lg:w-[55%] lg:h-full md:h-[300px] md:mb-10 md:w-full sm:h-[300px] sm:mb-10 sm:w-full xs:h-[250px] xs:mb-10 xs:w-full">
 //                   <img
-//                     src="/anshuma/templates/assets/images/microphone-icon.svg"
-//                     alt="Microphone settings"
-//                     className="w-full h-full object-contain"
+//                     src={tab.img}
+//                     alt={tab.alt}
+//                     className="w-full h-full object-cover"
+//                     onError={() =>
+//                       console.error(`Failed to load image: ${tab.img}`)
+//                     }
+//                     onLoad={() => console.log(`Loaded image: ${tab.img}`)}
 //                   />
 //                 </div>
-//                 <div className="inner-text w-full my-[30px]">
-//                   <p className="text-[18px] font-light text-[#2D3748] leading-[1.6] md:p-0">
-//                     There are over 2.5 million podcasts, in __ countries and in
-//                     more than 100 languages. With our proprietary podcast
-//                     performance data and aiWARE-enabled actionable intelligence,
-//                     Veritone One has the knowledge, experience, technology, and
-//                     leverage to help brands navigate this bustling landscape.
-//                   </p>
-//                 </div>
-//                 <div className="btn-wrap absolute bottom-[59px] left-[30px] md:relative md:left-0 md:bottom-0 md:mt-[30px]">
-//                   <a href="#" className="link-common inline-block">
-//                     <span>Learn More</span>
-//                   </a>
-//                 </div>
 //               </div>
-//               <div className="img-item w-[70%] overflow-hidden h-[553px] min-h-full lg:w-[55%] lg:h-full md:h-[300px] md:mb-10 md:w-full md:min-h-auto sm:h-[300px] sm:mb-10 sm:w-full sm:min-h-auto xs:h-[250px] xs:mb-10 xs:w-full xs:min-h-auto">
-//                 <img
-//                   src="/images/card-1.webp"
-//                   alt="Car"
-//                   className="w-full h-full object-cover block"
-//                 />
-//               </div>
-//             </div>
-//             <div className="column-item hidden h-full mt-5 md:block active:flex">
-//               <div className="text-wrap relative w-[51%] bg-white p-[58px_30px_94px_31px] lg:w-[45%] md:w-full md:mt-0 md:p-[30px_20px]">
-//                 <div className="icon-wrap relative max-w-[75px] h-[75px] overflow-hidden inline-block md:max-w-[60px] md:max-h-[60px] sm:max-w-[50px] sm:max-h-[50px] xs:max-w-[40px] xs:h-[40px] z-[2] w-full">
-//                   <img
-//                     src="/images/microphone-icon.svg"
-//                     alt="Microphone settings"
-//                     className="w-full h-full object-contain"
-//                   />
-//                 </div>
-//                 <div className="inner-text w-full my-[30px]">
-//                   <p className="text-[18px] font-light text-[#2D3748] leading-[1.6] md:p-0">
-//                     There are over 2.5 million podcasts, in __ countries and in
-//                     more
-//                   </p>
-//                 </div>
-//                 <div className="btn-wrap absolute bottom-[59px] left-[30px] md:relative md:left-0 md:bottom-0 md:mt-[30px]">
-//                   <a href="#" className="link-common inline-block">
-//                     <span>Learn More</span>
-//                   </a>
-//                 </div>
-//               </div>
-//               <div className="img-item w-[70%] overflow-hidden h-[553px] min-h-full lg:w-[55%] lg:h-full md:h-[300px] md:mb-10 md:w-full md:min-h-auto sm:h-[300px] sm:mb-10 sm:w-full sm:min-h-auto xs:h-[250px] xs:mb-10 xs:w-full xs:min-h-auto">
-//                 <img
-//                   src="/images/car-back.png"
-//                   alt="Manage banner"
-//                   className="w-full h-full object-cover block"
-//                 />
-//               </div>
-//             </div>
-//             <div className="column-item hidden h-full mt-5 md:block active:flex">
-//               <div className="text-wrap relative w-[51%] bg-white p-[58px_30px_94px_31px] lg:w-[45%] md:w-full md:mt-0 md:p-[30px_20px]">
-//                 <div className="icon-wrap relative max-w-[75px] h-[75px] overflow-hidden inline-block md:max-w-[60px] md:max-h-[60px] sm:max-w-[50px] sm:max-h-[50px] xs:max-w-[40px] xs:h-[40px] z-[2] w-full">
-//                   <img
-//                     src="/images/microphone-icon.svg"
-//                     alt="Microphone settings"
-//                     className="w-full h-full object-contain"
-//                   />
-//                 </div>
-//                 <div className="inner-text w-full my-[30px]">
-//                   <p className="text-[18px] font-light text-[#2D3748] leading-[1.6] md:p-0">
-//                     There are over 2.5 million podcasts, in __ countries and in
-//                     more than 100 languages. With our proprietary podcast
-//                     performance data and aiWARE-enabled actionable intelligence,
-//                     Veritone One has the knowledge, experience, technology, and
-//                     leverage to help brands navigate this bustling landscape.
-//                   </p>
-//                 </div>
-//                 <div className="btn-wrap absolute bottom-[59px] left-[30px] md:relative md:left-0 md:bottom-0 md:mt-[30px]">
-//                   <a href="#" className="link-common inline-block">
-//                     <span>Learn More</span>
-//                   </a>
-//                 </div>
-//               </div>
-//               <div className="img-item w-[70%] overflow-hidden h-[553px] min-h-full lg:w-[55%] lg:h-full md:h-[300px] md:mb-10 md:w-full md:min-h-auto sm:h-[300px] sm:mb-10 sm:w-full sm:min-h-auto xs:h-[250px] xs:mb-10 xs:w-full xs:min-h-auto">
-//                 <img
-//                   src="/images/car-pink-banner.png"
-//                   alt="Manage banner"
-//                   className="w-full h-full object-cover block"
-//                 />
-//               </div>
-//             </div>
-//             <div className="column-item hidden h-full mt-5 md:block active:flex">
-//               <div className="text-wrap relative w-[51%] bg-white p-[58px_30px_94px_31px] lg:w-[45%] md:w-full md:mt-0 md:p-[30px_20px]">
-//                 <div className="icon-wrap relative max-w-[75px] h-[75px] overflow-hidden inline-block md:max-w-[60px] md:max-h-[60px] sm:max-w-[50px] sm:max-h-[50px] xs:max-w-[40px] xs:h-[40px] z-[2] w-full">
-//                   <img
-//                     src="/images/microphone-icon.svg"
-//                     alt="Microphone settings"
-//                     className="w-full h-full object-contain"
-//                   />
-//                 </div>
-//                 <div className="inner-text w-full my-[30px]">
-//                   <p className="text-[18px] font-light text-[#2D3748] leading-[1.6] md:p-0">
-//                     There are over 2.5 million podcasts, in __ countries and in
-//                     more than 100 languages. With our proprietary podcast
-//                     performance data and aiWARE-enabled actionable intelligence,
-//                     Veritone One has the knowledge, experience, technology, and
-//                     leverage to help brands navigate this bustling landscape.
-//                   </p>
-//                 </div>
-//                 <div className="btn-wrap absolute bottom-[59px] left-[30px] md:relative md:left-0 md:bottom-0 md:mt-[30px]">
-//                   <a href="#" className="link-common inline-block">
-//                     <span>Learn More</span>
-//                   </a>
-//                 </div>
-//               </div>
-//               <div className="img-item w-[70%] overflow-hidden h-[553px] min-h-full lg:w-[55%] lg:h-full md:h-[300px] md:mb-10 md:w-full md:min-h-auto sm:h-[300px] sm:mb-10 sm:w-full sm:min-h-auto xs:h-[250px] xs:mb-10 xs:w-full xs:min-h-auto">
-//                 <img
-//                   src="/images/pink-black-car.png"
-//                   alt="Manage banner"
-//                   className="w-full h-full object-cover block"
-//                 />
-//               </div>
-//             </div>
-//             <div className="column-item hidden h-full mt-5 md:block active:flex">
-//               <div className="text-wrap relative w-[51%] bg-white p-[58px_30px_94px_31px] lg:w-[45%] md:w-full md:mt-0 md:p-[30px_20px]">
-//                 <div className="icon-wrap relative max-w-[75px] h-[75px] overflow-hidden inline-block md:max-w-[60px] md:max-h-[60px] sm:max-w-[50px] sm:max-h-[50px] xs:max-w-[40px] xs:h-[40px] z-[2] w-full">
-//                   <img
-//                     src="/images/microphone-icon.svg"
-//                     alt="Microphone settings"
-//                     className="w-full h-full object-contain"
-//                   />
-//                 </div>
-//                 <div className="inner-text w-full my-[30px]">
-//                   <p className="text-[18px] font-light text-[#2D3748] leading-[1.6] md:p-0">
-//                     There are over 2.5 million podcasts, in __ countries and in
-//                     more than 100 languages. With our proprietary podcast
-//                     performance data and aiWARE-enabled actionable intelligence,
-//                     Veritone One has the knowledge, experience, technology, and
-//                     leverage to help brands navigate this bustling landscape.
-//                   </p>
-//                 </div>
-//                 <div className="btn-wrap absolute bottom-[59px] left-[30px] md:relative md:left-0 md:bottom-0 md:mt-[30px]">
-//                   <a href="#" className="link-common inline-block">
-//                     <span>Learn More</span>
-//                   </a>
-//                 </div>
-//               </div>
-//               <div className="img-item w-[70%] overflow-hidden h-[553px] min-h-full lg:w-[55%] lg:h-full md:h-[300px] md:mb-10 md:w-full md:min-h-auto sm:h-[300px] sm:mb-10 sm:w-full sm:min-h-auto xs:h-[250px] xs:mb-10 xs:w-full xs:min-h-auto">
-//                 <img
-//                   src="/images/pink-black-car.png"
-//                   alt="Manage banner"
-//                   className="w-full h-full object-cover block"
-//                 />
-//               </div>
-//             </div>
-//             <div className="column-item hidden h-full mt-5 md:block active:flex">
-//               <div className="text-wrap relative w-[51%] bg-white p-[58px_30px_94px_31px] lg:w-[45%] md:w-full md:mt-0 md:p-[30px_20px]">
-//                 <div className="icon-wrap relative max-w-[75px] h-[75px] overflow-hidden inline-block md:max-w-[60px] md:max-h-[60px] sm:max-w-[50px] sm:max-h-[50px] xs:max-w-[40px] xs:h-[40px] z-[2] w-full">
-//                   <img
-//                     src="/images/microphone-icon.svg"
-//                     alt="Microphone settings"
-//                     className="w-full h-full object-contain"
-//                   />
-//                 </div>
-//                 <div className="inner-text w-full my-[30px]">
-//                   <p className="text-[18px] font-light text-[#2D3748] leading-[1.6] md:p-0">
-//                     There are over 2.5 million podcasts, in __ countries and in
-//                     more than 100 languages. With our proprietary podcast
-//                     performance data and aiWARE-enabled actionable intelligence,
-//                     Veritone One has the knowledge, experience, technology, and
-//                     leverage to help brands navigate this bustling landscape.
-//                   </p>
-//                 </div>
-//                 <div className="btn-wrap absolute bottom-[59px] left-[30px] md:relative md:left-0 md:bottom-0 md:mt-[30px]">
-//                   <a href="#" className="link-common inline-block">
-//                     <span>Learn More</span>
-//                   </a>
-//                 </div>
-//               </div>
-//               <div className="img-item w-[70%] overflow-hidden h-[553px] min-h-full lg:w-[55%] lg:h-full md:h-[300px] md:mb-10 md:w-full md:min-h-auto sm:h-[300px] sm:mb-10 sm:w-full sm:min-h-auto xs:h-[250px] xs:mb-10 xs:w-full xs:min-h-auto">
-//                 <img
-//                   src="/images/technology.png"
-//                   alt="Technology"
-//                   className="w-full h-full object-cover block"
-//                 />
-//               </div>
-//             </div>
+//             ))}
 //           </div>
 //         </div>
 //       </div>
@@ -347,7 +244,7 @@ import React, { useState, useEffect } from "react";
 export default function LogoTabGrids() {
   const [activeTab, setActiveTab] = useState(0);
 
-  // Tab data with icons, content, and images
+  // Tab data with icons, content, images, and contentIcon for text-wrap
   const tabs = [
     {
       name: "Podcast",
@@ -372,32 +269,13 @@ export default function LogoTabGrids() {
           </defs>
         </svg>
       ),
-      desc: "There are over 2.5 million podcasts, in __ countries and in more than 100 languages. With our proprietary podcast performance data and aiWARE-enabled actionable intelligence, Veritone One has the knowledge, experience, technology, and leverage to help brands navigate this bustling landscape.",
-      img: "/images/card-1.webp",
+      desc: "We managed podcast campaigns before the industry started publicly recording its revenue and fought our way to the top of the hill. Today, our clients comprise half of the top podcast advertisers, who trust us with campaigns that generate measurable growth. With over 200,000 brand integrations placed annually, we handle everything: host vetting, creative development, media buying, and attribution modeling. Every placement is tracked, every dollar measured, every campaign optimized for your lowest possible customer acquisition cost and highest ROAS.",
+      img: "/images/Podcast-3-scaled.jpg",
       alt: "Car",
+      contentIcon: "/images/mic.svg", // Unique icon for Podcast tab
     },
     {
-      name: "YouTube",
-      icon: (
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 40 40"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M16.6668 25L25.3168 20L16.6668 15V25ZM35.9335 11.95C36.1502 12.7334 36.3002 13.7834 36.4002 15.1167C36.5168 16.45 36.5668 17.6 36.5668 18.6L36.6668 20C36.6668 23.65 36.4002 26.3334 35.9335 28.05C35.5168 29.55 34.5502 30.5167 33.0502 30.9334C32.2668 31.15 30.8335 31.3 28.6335 31.4C26.4668 31.5167 24.4835 31.5667 22.6502 31.5667L20.0002 31.6667C13.0168 31.6667 8.66683 31.4 6.95016 30.9334C5.45016 30.5167 4.4835 29.55 4.06683 28.05C3.85016 27.2667 3.70016 26.2167 3.60016 24.8834C3.4835 23.55 3.4335 22.4 3.4335 21.4L3.3335 20C3.3335 16.35 3.60016 13.6667 4.06683 11.95C4.4835 10.45 5.45016 9.48337 6.95016 9.06671C7.7335 8.85004 9.16683 8.70004 11.3668 8.60004C13.5335 8.48337 15.5168 8.43337 17.3502 8.43337L20.0002 8.33337C26.9835 8.33337 31.3335 8.60004 33.0502 9.06671C34.5502 9.48337 35.5168 10.45 35.9335 11.95Z"
-            fill="#ECF0F7"
-          />
-        </svg>
-      ),
-      desc: "There are over 2.5 million podcasts, in __ countries and in more",
-      img: "/images/car-back.png",
-      alt: "Manage banner",
-    },
-    {
-      name: "Radio",
+      name: "Audio",
       icon: (
         <svg
           width="40"
@@ -409,35 +287,16 @@ export default function LogoTabGrids() {
           <path
             d="M33.3335 10C34.2176 10 35.0654 10.3512 35.6905 10.9763C36.3156 11.6015 36.6668 12.4493 36.6668 13.3334V33.3334C36.6668 34.2174 36.3156 35.0653 35.6905 35.6904C35.0654 36.3155 34.2176 36.6667 33.3335 36.6667H6.66683C5.78277 36.6667 4.93493 36.3155 4.30981 35.6904C3.68469 35.0653 3.3335 34.2174 3.3335 33.3334V13.3334C3.3335 11.9167 4.21683 10.7 5.46683 10.2167L26.1835 1.66669L27.4502 4.71669L14.7168 10H33.3335ZM33.3335 13.3334H6.66683V20H26.6668V16.6667H30.0002V20H33.3335V13.3334ZM11.6668 23.3334C10.3407 23.3334 9.06898 23.8601 8.1313 24.7978C7.19361 25.7355 6.66683 27.0073 6.66683 28.3334C6.66683 29.6594 7.19361 30.9312 8.1313 31.8689C9.06898 32.8066 10.3407 33.3334 11.6668 33.3334C12.9929 33.3334 14.2647 32.8066 15.2024 31.8689C16.14 30.9312 16.6668 29.6594 16.6668 28.3334C16.6668 27.0073 16.14 25.7355 15.2024 24.7978C14.2647 23.8601 12.9929 23.3334 11.6668 23.3334Z"
             fill="#ECF0F7"
-          />
+          ></path>
         </svg>
       ),
-      desc: "There are over 2.5 million podcasts, in __ countries and in more than 100 languages. With our proprietary podcast performance data and aiWARE-enabled actionable intelligence, Veritone One has the knowledge, experience, technology, and leverage to help brands navigate this bustling landscape.",
-      img: "/images/car-pink-banner.png",
+      desc: "From national radio to streaming and programmatic audio, we combine the proven power of legacy formats with the precision of today’s targeting. We use audio as a secret weapon—activating “Theater of the Mind” to move audiences through story and sound. Our proprietary Audiolytics™ system ensures every word is tailored to audience behavior and business goals—so your creative isn’t just heard, it performs.",
+      img: "/images/Audio-1.jpg",
       alt: "Manage banner",
+      contentIcon: "/images/radio.svg", // Unique icon for Audio tab
     },
     {
-      name: "Streaming",
-      icon: (
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 40 40"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M34.9998 28.3333H4.99984V8.33333H34.9998M34.9998 5H4.99984C4.11578 5 3.26794 5.35119 2.64281 5.97631C2.01769 6.60143 1.6665 7.44928 1.6665 8.33333V28.3333C1.6665 29.2174 2.01769 30.0652 2.64281 30.6904C3.26794 31.3155 4.11578 31.6667 4.99984 31.6667H13.3332V35H26.6665V31.6667H34.9998C35.8839 31.6667 36.7317 31.3155 37.3569 30.6904C37.982 30.0652 38.3332 29.2174 38.3332 28.3333V8.33333C38.3332 7.44928 37.982 6.60143 37.3569 5.97631C36.7317 5.35119 35.8839 5 34.9998 5Z"
-            fill="#ECF0F7"
-          />
-        </svg>
-      ),
-      desc: "There are over 2.5 million podcasts, in __ countries and in more than 100 languages. With our proprietary podcast performance data and aiWARE-enabled actionable intelligence, Veritone One has the knowledge, experience, technology, and leverage to help brands navigate this bustling landscape.",
-      img: "/images/pink-black-car.png",
-      alt: "Manage banner",
-    },
-    {
-      name: "Influencer",
+      name: "Creator",
       icon: (
         <svg
           width="40"
@@ -449,15 +308,16 @@ export default function LogoTabGrids() {
           <path
             d="M27.0502 30L20.0002 25.75L12.9502 30L14.8168 21.9833L8.60016 16.6L16.8002 15.9L20.0002 8.33331L23.2002 15.8833L31.4002 16.5833L25.1835 21.9666L27.0502 30ZM20.0002 3.33331C10.7835 3.33331 3.3335 10.8333 3.3335 20C3.3335 24.4203 5.08944 28.6595 8.21505 31.7851C9.76269 33.3327 11.6 34.5604 13.6221 35.398C15.6442 36.2356 17.8115 36.6666 20.0002 36.6666C24.4204 36.6666 28.6597 34.9107 31.7853 31.7851C34.9109 28.6595 36.6668 24.4203 36.6668 20C36.6668 17.8113 36.2357 15.644 35.3982 13.6219C34.5606 11.5998 33.3329 9.76251 31.7853 8.21487C30.2376 6.66722 28.4003 5.43957 26.3782 4.60199C24.3561 3.76441 22.1889 3.33331 20.0002 3.33331Z"
             fill="#ECF0F7"
-          />
+          ></path>
         </svg>
       ),
-      desc: "There are over 2.5 million podcasts, in __ countries and in more than 100 languages. With our proprietary podcast performance data and aiWARE-enabled actionable intelligence, Veritone One has the knowledge, experience, technology, and leverage to help brands navigate this bustling landscape.",
-      img: "/images/pink-black-car.png",
+      desc: "We find, negotiate, and license the right creator talent as an extension of your company, amassing brand equity while driving immediate performance. From podcasters to YouTubers to 360-degree campaigns, our talent partnerships are custom-built to your growth model. No wasted impressions, just direct access, optimized usage, and accountable ROI.",
+      img: "/images/Creator-Image-tab-grid.jpg",
       alt: "Manage banner",
+      contentIcon: "/images/star-circle.svg", // Unique icon for Creator tab
     },
     {
-      name: "Digital",
+      name: "Programmatic",
       icon: (
         <svg
           width="40"
@@ -469,12 +329,65 @@ export default function LogoTabGrids() {
           <path
             d="M15 21.6667V18.3333H18.3333V21.6667M18.3333 25V21.6667H21.6667V25M18.3333 18.3333V15H21.6667V18.3333M15 15V11.6667H18.3333V15M15 28.3333V25H18.3333V28.3333M5 8.33333V31.6667C5 33.5 6.5 35 8.33333 35H31.6667C33.5 35 35 33.5 35 31.6667V8.33333C35 6.5 33.5 5 31.6667 5H8.33333C6.5 5 5 6.5 5 8.33333ZM30 25V28.3333H26.6667V25M30 18.3333V21.6667H26.6667V18.3333M30 11.6667V15H26.6667V11.6667M18.3333 8.33333V11.6667H21.6667V8.33333H25V11.6667H21.6667V15H25V18.3333H21.6667V21.6667H25V25H21.6667V28.3333H25V31.6667H21.6667V28.3333H18.3333V31.6667H8.33333V8.33333H18.3333Z"
             fill="#ECF0F7"
-          />
+          ></path>
         </svg>
       ),
-      desc: "There are over 2.5 million podcasts, in __ countries and in more than 100 languages. With our proprietary podcast performance data and aiWARE-enabled actionable intelligence, Veritone One has the knowledge, experience, technology, and leverage to help brands navigate this bustling landscape.",
-      img: "/images/technology.png",
+      desc: "Programmatic audio is exploding, but most brands burn their budget before unlocking scale or performance. We help you bypass the learning curve with precision-built campaigns that blend discovery, retargeting, and conversion-engineered for CAC efficiency and full-funnel ROI. Our always-on model uncovers high-value audiences, allows high-volume creative testing, and feeds insights back into your podcast and creator strategy so nothing is wasted and everything gets smarter.",
+      img: "/images/Programmatic-1.jpg",
+      alt: "Manage banner",
+      contentIcon: "/images/gradient-horizontal.svg", // Unique icon for Programmatic tab
+    },
+    {
+      name: "International",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="50"
+          height="50"
+          viewBox="0 0 50 50"
+          fill="none"
+        >
+          <g clip-path="url(#clip0_5493_35778)">
+            <mask
+              id="path-1-outside-1_5493_35778"
+              maskUnits="userSpaceOnUse"
+              x="0.0742188"
+              y="0.0737305"
+              width="50"
+              height="50"
+              fill="black"
+            >
+              <rect
+                fill="transparent"
+                x="0.0742188"
+                y="0.0737305"
+                width="50"
+                height="50"
+              ></rect>
+              <path d="M48.0016 38.797C47.9111 38.9536 47.747 39.0412 47.5782 39.0412C47.4954 39.0412 47.4114 39.0201 47.3346 38.9757L44.4881 37.3322C44.2545 37.1974 44.1745 36.8988 44.3094 36.6652C44.4441 36.4316 44.7428 36.3515 44.9764 36.4865L47.8229 38.13C48.0564 38.2648 48.1364 38.5634 48.0016 38.797ZM44.6768 26.3883C44.4431 26.2533 44.1445 26.3334 44.0098 26.567L42.3663 29.4135C42.2314 29.6471 42.3114 29.9456 42.545 30.0805C42.622 30.1249 42.7059 30.146 42.7887 30.146C42.9574 30.146 43.1216 30.0585 43.212 29.9018L44.8555 27.0553C44.9903 26.8218 44.9103 26.5231 44.6768 26.3883ZM48.311 31.5588L45.1361 32.4095C44.8757 32.4793 44.7211 32.7471 44.7908 33.0075C44.8493 33.2257 45.0466 33.3695 45.2622 33.3695C45.304 33.3695 45.3466 33.3642 45.3889 33.3528L48.5638 32.5021C48.8242 32.4323 48.9788 32.1646 48.9091 31.9041C48.8392 31.6435 48.571 31.4894 48.311 31.5588ZM48.9257 3.76104V10.1534C48.9257 11.6352 47.7202 12.8407 46.2384 12.8407H39.9172L38.2234 14.2337C38.8372 16.1261 39.1486 18.1014 39.1486 20.111C39.1486 22.0056 38.8705 23.8742 38.3233 25.6692C38.3508 25.7358 38.3758 25.804 38.3949 25.8754L39.9633 31.7287L42.0611 31.7473C42.2805 31.7493 42.4717 31.8973 42.5284 32.1092L43.2808 34.9168C43.3376 35.1287 43.246 35.3524 43.0569 35.4639L41.2495 36.5288L42.8179 42.3821C43.0573 43.2758 42.5251 44.1977 41.6314 44.4372C41.4878 44.4757 41.3419 44.4947 41.1969 44.4947C40.906 44.4947 40.6185 44.4182 40.3589 44.2684C39.97 44.0437 39.6921 43.6823 39.5765 43.2507L39.3977 42.5834C38.151 41.8195 34.265 39.9434 27.901 41.3152C27.4309 41.4166 26.9595 41.5319 26.4896 41.6544L29.106 46.186C29.6097 47.0585 29.3097 48.178 28.4373 48.6818C28.1503 48.8475 27.8366 48.9262 27.5269 48.9263C26.8949 48.9263 26.2796 48.5986 25.9416 48.0131L22.8552 42.6672C22.7897 42.685 22.7243 42.703 22.659 42.7206C22.3501 42.8033 22.041 42.843 21.7379 42.843C20.1594 42.8432 18.7384 41.7679 18.2935 40.1076C18.1991 39.7555 18.1558 39.3992 18.1615 39.0479C17.0761 38.9374 16.0037 38.7353 14.957 38.4416C15.4235 39.403 15.6855 40.4813 15.6855 41.6198C15.6855 45.6482 12.4082 48.9256 8.37978 48.9256C4.35137 48.9256 1.07422 45.648 1.07422 41.6196C1.07422 37.8892 3.88525 34.805 7.5 34.3688C5.68897 32.763 4.17891 30.81 3.09512 28.656C1.7541 25.9906 1.07422 23.1157 1.07422 20.111C1.07422 9.61387 9.61426 1.07383 20.1114 1.07383C24.0482 1.07383 27.7854 2.24912 30.9814 4.48076V3.76104C30.9814 2.2793 32.1869 1.07373 33.6688 1.07373H46.2385C47.7202 1.07383 48.9257 2.2793 48.9257 3.76104ZM23.9003 2.44512C25.1708 3.41064 26.3296 4.86904 27.3106 6.77119C27.723 7.5707 28.0936 8.429 28.4209 9.33564C29.2893 9.121 30.1432 8.87158 30.9813 8.5875V5.6875C28.8555 4.08174 26.4555 2.98711 23.9003 2.44512ZM30.1637 20.5993C30.1196 23.9636 29.621 27.173 28.7357 29.9629C29.9226 30.2576 31.0772 30.6136 32.1892 31.0283C34.0126 29.559 34.9422 28.1299 35.3325 27.4115L35.1536 26.7438C35.0379 26.3122 35.0979 25.8603 35.3225 25.4714C35.547 25.0824 35.9084 24.8045 36.34 24.6888C36.7624 24.5759 37.1903 24.6368 37.5503 24.8251C37.9209 23.4507 38.1268 22.0342 38.1649 20.5994L30.1637 20.5993ZM18.6217 37.3323C18.8752 36.8801 19.2169 36.499 19.6231 36.2053V29.9024C17.2753 29.9339 14.9708 30.1929 12.7648 30.6658C14.0878 34.2921 16.0737 36.9379 18.388 37.8386C18.4524 37.6649 18.5301 37.4957 18.6217 37.3323ZM10.0589 19.6228C10.1027 16.2718 10.598 13.0652 11.4879 10.263C9.67705 9.8124 7.93779 9.21846 6.30078 8.48672C3.74844 11.5144 2.17051 15.3889 2.05752 19.6228H10.0589ZM11.0356 19.6228H19.6231V11.2963C17.1646 11.2642 14.7504 10.9896 12.441 10.4858C11.5668 13.2085 11.0796 16.3405 11.0356 19.6228ZM19.6231 2.07744C17.4396 2.31211 15.3804 4.11621 13.7801 7.21875C13.4036 7.94863 13.0635 8.73047 12.7606 9.55537C14.9679 10.0289 17.2738 10.2881 19.6231 10.3196V2.07744ZM11.0358 20.5993C11.0814 23.9222 11.5912 27.0577 12.4468 29.7351C14.7543 29.232 17.1666 28.9579 19.623 28.9259V20.5993H11.0358ZM20.5997 35.7113C20.6551 35.6936 20.7111 35.677 20.7678 35.6618C21.3563 35.5042 21.9557 35.3541 22.5353 35.209C23.5641 34.9514 24.6239 34.6855 25.6517 34.3698C26.3524 33.2902 26.9601 32.0445 27.4644 30.6709C25.2493 30.1961 22.9357 29.9344 20.5997 29.9025V35.7113ZM27.0797 33.8843C28.7667 33.2486 30.1404 32.4975 31.2519 31.7278C30.3344 31.408 29.3887 31.1289 28.4211 30.8912C28.033 31.9664 27.5846 32.9696 27.0797 33.8843ZM29.1872 20.5993H20.5997V28.926C23.0443 28.9585 25.4663 29.2365 27.7834 29.7414C28.6524 27.0328 29.1431 23.8973 29.1872 20.5993ZM29.1873 19.6228C29.1434 16.3412 28.6563 13.2099 27.7824 10.4877C25.4724 10.9933 23.0702 11.2649 20.5997 11.2964V19.6229L29.1873 19.6228ZM27.4634 9.5585C27.1603 8.73242 26.8197 7.94951 26.4428 7.21885C24.8425 4.11631 22.7834 2.31221 20.5997 2.07754V10.3198C22.9601 10.2889 25.2556 10.0337 27.4634 9.5585ZM6.98496 7.71953C8.51006 8.38096 10.1238 8.92178 11.8021 9.33496C12.1294 8.42861 12.4999 7.57051 12.9122 6.77119C13.8903 4.8749 15.045 3.41963 16.3109 2.454C12.6785 3.23506 9.44854 5.11123 6.98496 7.71953ZM6.2876 31.7415C7.92939 31.0066 9.67422 30.4104 11.491 29.9584C10.6016 27.1476 10.1036 23.9221 10.0592 20.5993H2.05771C2.1668 24.7479 3.66572 28.6404 6.2876 31.7415ZM14.7091 41.6196C14.7091 38.1298 11.8698 35.2904 8.37988 35.2904C4.88994 35.2904 2.05078 38.1298 2.05078 41.6196C2.05078 45.1095 4.89004 47.9488 8.37998 47.9488C11.8699 47.9488 14.7091 45.1095 14.7091 41.6196ZM14.1679 37.1693C14.8754 37.4158 15.5976 37.6189 16.3308 37.7751C14.8396 36.6413 13.5051 34.8382 12.4508 32.4931C12.2194 31.9784 12.004 31.4418 11.8043 30.8867C10.1211 31.301 8.50273 31.8438 6.97373 32.5077C7.59356 33.1616 8.2666 33.7748 8.99092 34.3414C11.0949 34.5166 12.9479 35.5863 14.1679 37.1693ZM24.15 41.2892C25.1428 41.0055 26.1646 40.7139 27.195 40.4731L25.8195 35.3398C24.8062 35.6469 23.7746 35.9054 22.7724 36.1562C22.1966 36.3005 21.6013 36.4495 21.0205 36.6052C20.3592 36.7823 19.8098 37.2102 19.4735 37.8099C19.1312 38.4205 19.0471 39.1467 19.2368 39.8546C19.6254 41.3047 21.0175 42.1491 22.4063 41.777C22.9878 41.6213 23.5786 41.4524 24.15 41.2892ZM25.5144 41.918C25.1462 42.0205 24.7801 42.1248 24.4183 42.2282C24.2231 42.284 24.0254 42.3403 23.8268 42.3967L26.7874 47.5247C27.022 47.9308 27.5432 48.0706 27.9491 47.836C28.3552 47.6016 28.4948 47.0804 28.2604 46.6743L25.5144 41.918ZM39.0471 41.2745L35.6831 28.7199C33.9001 31.3929 30.6668 33.6926 26.7503 35.0404L28.1508 40.2671C32.2164 39.4761 36.1665 39.8512 39.0471 41.2745ZM40.2257 32.7076L40.9873 35.5499L42.2415 34.8109L41.6813 32.7205L40.2257 32.7076ZM37.4518 26.128C37.3517 25.7545 36.9663 25.532 36.5928 25.6321C36.4131 25.6803 36.2623 25.7966 36.1682 25.9597C36.074 26.1227 36.0487 26.3115 36.0969 26.4911L40.5198 42.9978C40.568 43.1774 40.6843 43.3282 40.8474 43.4225C41.0105 43.5165 41.1991 43.542 41.3788 43.4937C41.7523 43.3937 41.9749 43.0082 41.8748 42.6347L37.4518 26.128ZM37.4097 14.903L35.839 16.1948C35.7498 16.2682 35.6397 16.3061 35.5287 16.3061C35.4579 16.3061 35.3867 16.2907 35.3203 16.2593C35.1495 16.1786 35.0405 16.0066 35.0405 15.8178V12.8407H33.6687C32.1869 12.8407 30.9813 11.6352 30.9813 10.1534V9.61865C30.244 9.86006 29.4945 10.0741 28.7352 10.2638C29.6249 13.0658 30.1201 16.272 30.164 19.6227H38.1648C38.1223 18.0138 37.8692 16.4312 37.4097 14.903ZM47.9491 3.76104C47.9491 2.81777 47.1817 2.05029 46.2384 2.05029H33.6687C32.7254 2.05029 31.9579 2.81768 31.9579 3.76104V10.1534C31.9579 11.0967 32.7253 11.8642 33.6687 11.8642H35.5288C35.7984 11.8642 36.0171 12.0827 36.0171 12.3524V14.7839L39.4321 11.9753C39.5195 11.9034 39.6292 11.8641 39.7423 11.8641H46.2385C47.1817 11.8641 47.9492 11.0967 47.9492 10.1533V3.76104H47.9491ZM45.292 6.46894H34.6152C34.3456 6.46894 34.127 6.6875 34.127 6.95723C34.127 7.22695 34.3456 7.44551 34.6152 7.44551H45.292C45.5616 7.44551 45.7803 7.22695 45.7803 6.95723C45.7803 6.6875 45.5616 6.46894 45.292 6.46894ZM45.292 4.04941H34.6152C34.3456 4.04941 34.127 4.26797 34.127 4.5377C34.127 4.80742 34.3456 5.02598 34.6152 5.02598H45.292C45.5616 5.02598 45.7803 4.80742 45.7803 4.5377C45.7803 4.26797 45.5616 4.04941 45.292 4.04941ZM45.292 8.88848H39.7423C39.4727 8.88848 39.254 9.10703 39.254 9.37676C39.254 9.64648 39.4727 9.86504 39.7423 9.86504H45.292C45.5616 9.86504 45.7803 9.64648 45.7803 9.37676C45.7803 9.10703 45.5616 8.88848 45.292 8.88848ZM13.7098 41.6196C13.7098 44.5585 11.3188 46.9494 8.37988 46.9494C5.44102 46.9494 3.0501 44.5585 3.0501 41.6196C3.0501 38.6807 5.44102 36.2897 8.37988 36.2897C11.3187 36.2897 13.7098 38.6807 13.7098 41.6196ZM12.7332 41.6196C12.7332 39.2192 10.7803 37.2663 8.37988 37.2663C5.97949 37.2663 4.02666 39.2192 4.02666 41.6196C4.02666 44.02 5.97949 45.9729 8.37988 45.9729C10.7803 45.9729 12.7332 44.02 12.7332 41.6196ZM8.37988 41.1313C7.99883 41.1313 7.68877 40.8213 7.68877 40.4402C7.68877 40.0593 7.99883 39.7492 8.37988 39.7492C8.61367 39.7492 8.82998 39.8663 8.95859 40.0624C9.10645 40.2879 9.40908 40.3509 9.63467 40.203C9.86025 40.0552 9.92324 39.7525 9.77529 39.527C9.55791 39.1953 9.23594 38.9575 8.86816 38.8453V38.657C8.86816 38.3873 8.64951 38.1687 8.37988 38.1687C8.11025 38.1687 7.8916 38.3873 7.8916 38.657V38.8455C7.20957 39.0549 6.71221 39.6905 6.71221 40.4402C6.71221 41.3598 7.46035 42.1079 8.37988 42.1079C8.76094 42.1079 9.071 42.418 9.071 42.7989C9.071 43.1799 8.76094 43.4899 8.37988 43.4899C8.14609 43.4899 7.92979 43.3729 7.80117 43.1768C7.65332 42.9514 7.35078 42.8884 7.1251 43.0361C6.89951 43.184 6.83652 43.4866 6.98447 43.7122C7.20186 44.0438 7.52383 44.2816 7.8916 44.3938V44.5822C7.8916 44.852 8.11025 45.0705 8.37988 45.0705C8.64951 45.0705 8.86816 44.852 8.86816 44.5822V44.3937C9.5502 44.1843 10.0476 43.5486 10.0476 42.7989C10.0476 41.8794 9.29941 41.1313 8.37988 41.1313Z"></path>
+            </mask>
+            <path
+              d="M48.0016 38.797C47.9111 38.9536 47.747 39.0412 47.5782 39.0412C47.4954 39.0412 47.4114 39.0201 47.3346 38.9757L44.4881 37.3322C44.2545 37.1974 44.1745 36.8988 44.3094 36.6652C44.4441 36.4316 44.7428 36.3515 44.9764 36.4865L47.8229 38.13C48.0564 38.2648 48.1364 38.5634 48.0016 38.797ZM44.6768 26.3883C44.4431 26.2533 44.1445 26.3334 44.0098 26.567L42.3663 29.4135C42.2314 29.6471 42.3114 29.9456 42.545 30.0805C42.622 30.1249 42.7059 30.146 42.7887 30.146C42.9574 30.146 43.1216 30.0585 43.212 29.9018L44.8555 27.0553C44.9903 26.8218 44.9103 26.5231 44.6768 26.3883ZM48.311 31.5588L45.1361 32.4095C44.8757 32.4793 44.7211 32.7471 44.7908 33.0075C44.8493 33.2257 45.0466 33.3695 45.2622 33.3695C45.304 33.3695 45.3466 33.3642 45.3889 33.3528L48.5638 32.5021C48.8242 32.4323 48.9788 32.1646 48.9091 31.9041C48.8392 31.6435 48.571 31.4894 48.311 31.5588ZM48.9257 3.76104V10.1534C48.9257 11.6352 47.7202 12.8407 46.2384 12.8407H39.9172L38.2234 14.2337C38.8372 16.1261 39.1486 18.1014 39.1486 20.111C39.1486 22.0056 38.8705 23.8742 38.3233 25.6692C38.3508 25.7358 38.3758 25.804 38.3949 25.8754L39.9633 31.7287L42.0611 31.7473C42.2805 31.7493 42.4717 31.8973 42.5284 32.1092L43.2808 34.9168C43.3376 35.1287 43.246 35.3524 43.0569 35.4639L41.2495 36.5288L42.8179 42.3821C43.0573 43.2758 42.5251 44.1977 41.6314 44.4372C41.4878 44.4757 41.3419 44.4947 41.1969 44.4947C40.906 44.4947 40.6185 44.4182 40.3589 44.2684C39.97 44.0437 39.6921 43.6823 39.5765 43.2507L39.3977 42.5834C38.151 41.8195 34.265 39.9434 27.901 41.3152C27.4309 41.4166 26.9595 41.5319 26.4896 41.6544L29.106 46.186C29.6097 47.0585 29.3097 48.178 28.4373 48.6818C28.1503 48.8475 27.8366 48.9262 27.5269 48.9263C26.8949 48.9263 26.2796 48.5986 25.9416 48.0131L22.8552 42.6672C22.7897 42.685 22.7243 42.703 22.659 42.7206C22.3501 42.8033 22.041 42.843 21.7379 42.843C20.1594 42.8432 18.7384 41.7679 18.2935 40.1076C18.1991 39.7555 18.1558 39.3992 18.1615 39.0479C17.0761 38.9374 16.0037 38.7353 14.957 38.4416C15.4235 39.403 15.6855 40.4813 15.6855 41.6198C15.6855 45.6482 12.4082 48.9256 8.37978 48.9256C4.35137 48.9256 1.07422 45.648 1.07422 41.6196C1.07422 37.8892 3.88525 34.805 7.5 34.3688C5.68897 32.763 4.17891 30.81 3.09512 28.656C1.7541 25.9906 1.07422 23.1157 1.07422 20.111C1.07422 9.61387 9.61426 1.07383 20.1114 1.07383C24.0482 1.07383 27.7854 2.24912 30.9814 4.48076V3.76104C30.9814 2.2793 32.1869 1.07373 33.6688 1.07373H46.2385C47.7202 1.07383 48.9257 2.2793 48.9257 3.76104ZM23.9003 2.44512C25.1708 3.41064 26.3296 4.86904 27.3106 6.77119C27.723 7.5707 28.0936 8.429 28.4209 9.33564C29.2893 9.121 30.1432 8.87158 30.9813 8.5875V5.6875C28.8555 4.08174 26.4555 2.98711 23.9003 2.44512ZM30.1637 20.5993C30.1196 23.9636 29.621 27.173 28.7357 29.9629C29.9226 30.2576 31.0772 30.6136 32.1892 31.0283C34.0126 29.559 34.9422 28.1299 35.3325 27.4115L35.1536 26.7438C35.0379 26.3122 35.0979 25.8603 35.3225 25.4714C35.547 25.0824 35.9084 24.8045 36.34 24.6888C36.7624 24.5759 37.1903 24.6368 37.5503 24.8251C37.9209 23.4507 38.1268 22.0342 38.1649 20.5994L30.1637 20.5993ZM18.6217 37.3323C18.8752 36.8801 19.2169 36.499 19.6231 36.2053V29.9024C17.2753 29.9339 14.9708 30.1929 12.7648 30.6658C14.0878 34.2921 16.0737 36.9379 18.388 37.8386C18.4524 37.6649 18.5301 37.4957 18.6217 37.3323ZM10.0589 19.6228C10.1027 16.2718 10.598 13.0652 11.4879 10.263C9.67705 9.8124 7.93779 9.21846 6.30078 8.48672C3.74844 11.5144 2.17051 15.3889 2.05752 19.6228H10.0589ZM11.0356 19.6228H19.6231V11.2963C17.1646 11.2642 14.7504 10.9896 12.441 10.4858C11.5668 13.2085 11.0796 16.3405 11.0356 19.6228ZM19.6231 2.07744C17.4396 2.31211 15.3804 4.11621 13.7801 7.21875C13.4036 7.94863 13.0635 8.73047 12.7606 9.55537C14.9679 10.0289 17.2738 10.2881 19.6231 10.3196V2.07744ZM11.0358 20.5993C11.0814 23.9222 11.5912 27.0577 12.4468 29.7351C14.7543 29.232 17.1666 28.9579 19.623 28.9259V20.5993H11.0358ZM20.5997 35.7113C20.6551 35.6936 20.7111 35.677 20.7678 35.6618C21.3563 35.5042 21.9557 35.3541 22.5353 35.209C23.5641 34.9514 24.6239 34.6855 25.6517 34.3698C26.3524 33.2902 26.9601 32.0445 27.4644 30.6709C25.2493 30.1961 22.9357 29.9344 20.5997 29.9025V35.7113ZM27.0797 33.8843C28.7667 33.2486 30.1404 32.4975 31.2519 31.7278C30.3344 31.408 29.3887 31.1289 28.4211 30.8912C28.033 31.9664 27.5846 32.9696 27.0797 33.8843ZM29.1872 20.5993H20.5997V28.926C23.0443 28.9585 25.4663 29.2365 27.7834 29.7414C28.6524 27.0328 29.1431 23.8973 29.1872 20.5993ZM29.1873 19.6228C29.1434 16.3412 28.6563 13.2099 27.7824 10.4877C25.4724 10.9933 23.0702 11.2649 20.5997 11.2964V19.6229L29.1873 19.6228ZM27.4634 9.5585C27.1603 8.73242 26.8197 7.94951 26.4428 7.21885C24.8425 4.11631 22.7834 2.31221 20.5997 2.07754V10.3198C22.9601 10.2889 25.2556 10.0337 27.4634 9.5585ZM6.98496 7.71953C8.51006 8.38096 10.1238 8.92178 11.8021 9.33496C12.1294 8.42861 12.4999 7.57051 12.9122 6.77119C13.8903 4.8749 15.045 3.41963 16.3109 2.454C12.6785 3.23506 9.44854 5.11123 6.98496 7.71953ZM6.2876 31.7415C7.92939 31.0066 9.67422 30.4104 11.491 29.9584C10.6016 27.1476 10.1036 23.9221 10.0592 20.5993H2.05771C2.1668 24.7479 3.66572 28.6404 6.2876 31.7415ZM14.7091 41.6196C14.7091 38.1298 11.8698 35.2904 8.37988 35.2904C4.88994 35.2904 2.05078 38.1298 2.05078 41.6196C2.05078 45.1095 4.89004 47.9488 8.37998 47.9488C11.8699 47.9488 14.7091 45.1095 14.7091 41.6196ZM14.1679 37.1693C14.8754 37.4158 15.5976 37.6189 16.3308 37.7751C14.8396 36.6413 13.5051 34.8382 12.4508 32.4931C12.2194 31.9784 12.004 31.4418 11.8043 30.8867C10.1211 31.301 8.50273 31.8438 6.97373 32.5077C7.59356 33.1616 8.2666 33.7748 8.99092 34.3414C11.0949 34.5166 12.9479 35.5863 14.1679 37.1693ZM24.15 41.2892C25.1428 41.0055 26.1646 40.7139 27.195 40.4731L25.8195 35.3398C24.8062 35.6469 23.7746 35.9054 22.7724 36.1562C22.1966 36.3005 21.6013 36.4495 21.0205 36.6052C20.3592 36.7823 19.8098 37.2102 19.4735 37.8099C19.1312 38.4205 19.0471 39.1467 19.2368 39.8546C19.6254 41.3047 21.0175 42.1491 22.4063 41.777C22.9878 41.6213 23.5786 41.4524 24.15 41.2892ZM25.5144 41.918C25.1462 42.0205 24.7801 42.1248 24.4183 42.2282C24.2231 42.284 24.0254 42.3403 23.8268 42.3967L26.7874 47.5247C27.022 47.9308 27.5432 48.0706 27.9491 47.836C28.3552 47.6016 28.4948 47.0804 28.2604 46.6743L25.5144 41.918ZM39.0471 41.2745L35.6831 28.7199C33.9001 31.3929 30.6668 33.6926 26.7503 35.0404L28.1508 40.2671C32.2164 39.4761 36.1665 39.8512 39.0471 41.2745ZM40.2257 32.7076L40.9873 35.5499L42.2415 34.8109L41.6813 32.7205L40.2257 32.7076ZM37.4518 26.128C37.3517 25.7545 36.9663 25.532 36.5928 25.6321C36.4131 25.6803 36.2623 25.7966 36.1682 25.9597C36.074 26.1227 36.0487 26.3115 36.0969 26.4911L40.5198 42.9978C40.568 43.1774 40.6843 43.3282 40.8474 43.4225C41.0105 43.5165 41.1991 43.542 41.3788 43.4937C41.7523 43.3937 41.9749 43.0082 41.8748 42.6347L37.4518 26.128ZM37.4097 14.903L35.839 16.1948C35.7498 16.2682 35.6397 16.3061 35.5287 16.3061C35.4579 16.3061 35.3867 16.2907 35.3203 16.2593C35.1495 16.1786 35.0405 16.0066 35.0405 15.8178V12.8407H33.6687C32.1869 12.8407 30.9813 11.6352 30.9813 10.1534V9.61865C30.244 9.86006 29.4945 10.0741 28.7352 10.2638C29.6249 13.0658 30.1201 16.272 30.164 19.6227H38.1648C38.1223 18.0138 37.8692 16.4312 37.4097 14.903ZM47.9491 3.76104C47.9491 2.81777 47.1817 2.05029 46.2384 2.05029H33.6687C32.7254 2.05029 31.9579 2.81768 31.9579 3.76104V10.1534C31.9579 11.0967 32.7253 11.8642 33.6687 11.8642H35.5288C35.7984 11.8642 36.0171 12.0827 36.0171 12.3524V14.7839L39.4321 11.9753C39.5195 11.9034 39.6292 11.8641 39.7423 11.8641H46.2385C47.1817 11.8641 47.9492 11.0967 47.9492 10.1533V3.76104H47.9491ZM45.292 6.46894H34.6152C34.3456 6.46894 34.127 6.6875 34.127 6.95723C34.127 7.22695 34.3456 7.44551 34.6152 7.44551H45.292C45.5616 7.44551 45.7803 7.22695 45.7803 6.95723C45.7803 6.6875 45.5616 6.46894 45.292 6.46894ZM45.292 4.04941H34.6152C34.3456 4.04941 34.127 4.26797 34.127 4.5377C34.127 4.80742 34.3456 5.02598 34.6152 5.02598H45.292C45.5616 5.02598 45.7803 4.80742 45.7803 4.5377C45.7803 4.26797 45.5616 4.04941 45.292 4.04941ZM45.292 8.88848H39.7423C39.4727 8.88848 39.254 9.10703 39.254 9.37676C39.254 9.64648 39.4727 9.86504 39.7423 9.86504H45.292C45.5616 9.86504 45.7803 9.64648 45.7803 9.37676C45.7803 9.10703 45.5616 8.88848 45.292 8.88848ZM13.7098 41.6196C13.7098 44.5585 11.3188 46.9494 8.37988 46.9494C5.44102 46.9494 3.0501 44.5585 3.0501 41.6196C3.0501 38.6807 5.44102 36.2897 8.37988 36.2897C11.3187 36.2897 13.7098 38.6807 13.7098 41.6196ZM12.7332 41.6196C12.7332 39.2192 10.7803 37.2663 8.37988 37.2663C5.97949 37.2663 4.02666 39.2192 4.02666 41.6196C4.02666 44.02 5.97949 45.9729 8.37988 45.9729C10.7803 45.9729 12.7332 44.02 12.7332 41.6196ZM8.37988 41.1313C7.99883 41.1313 7.68877 40.8213 7.68877 40.4402C7.68877 40.0593 7.99883 39.7492 8.37988 39.7492C8.61367 39.7492 8.82998 39.8663 8.95859 40.0624C9.10645 40.2879 9.40908 40.3509 9.63467 40.203C9.86025 40.0552 9.92324 39.7525 9.77529 39.527C9.55791 39.1953 9.23594 38.9575 8.86816 38.8453V38.657C8.86816 38.3873 8.64951 38.1687 8.37988 38.1687C8.11025 38.1687 7.8916 38.3873 7.8916 38.657V38.8455C7.20957 39.0549 6.71221 39.6905 6.71221 40.4402C6.71221 41.3598 7.46035 42.1079 8.37988 42.1079C8.76094 42.1079 9.071 42.418 9.071 42.7989C9.071 43.1799 8.76094 43.4899 8.37988 43.4899C8.14609 43.4899 7.92979 43.3729 7.80117 43.1768C7.65332 42.9514 7.35078 42.8884 7.1251 43.0361C6.89951 43.184 6.83652 43.4866 6.98447 43.7122C7.20186 44.0438 7.52383 44.2816 7.8916 44.3938V44.5822C7.8916 44.852 8.11025 45.0705 8.37988 45.0705C8.64951 45.0705 8.86816 44.852 8.86816 44.5822V44.3937C9.5502 44.1843 10.0476 43.5486 10.0476 42.7989C10.0476 41.8794 9.29941 41.1313 8.37988 41.1313Z"
+              fill="#ECF0F7"
+            ></path>
+            <path
+              d="M48.0016 38.797C47.9111 38.9536 47.747 39.0412 47.5782 39.0412C47.4954 39.0412 47.4114 39.0201 47.3346 38.9757L44.4881 37.3322C44.2545 37.1974 44.1745 36.8988 44.3094 36.6652C44.4441 36.4316 44.7428 36.3515 44.9764 36.4865L47.8229 38.13C48.0564 38.2648 48.1364 38.5634 48.0016 38.797ZM44.6768 26.3883C44.4431 26.2533 44.1445 26.3334 44.0098 26.567L42.3663 29.4135C42.2314 29.6471 42.3114 29.9456 42.545 30.0805C42.622 30.1249 42.7059 30.146 42.7887 30.146C42.9574 30.146 43.1216 30.0585 43.212 29.9018L44.8555 27.0553C44.9903 26.8218 44.9103 26.5231 44.6768 26.3883ZM48.311 31.5588L45.1361 32.4095C44.8757 32.4793 44.7211 32.7471 44.7908 33.0075C44.8493 33.2257 45.0466 33.3695 45.2622 33.3695C45.304 33.3695 45.3466 33.3642 45.3889 33.3528L48.5638 32.5021C48.8242 32.4323 48.9788 32.1646 48.9091 31.9041C48.8392 31.6435 48.571 31.4894 48.311 31.5588ZM48.9257 3.76104V10.1534C48.9257 11.6352 47.7202 12.8407 46.2384 12.8407H39.9172L38.2234 14.2337C38.8372 16.1261 39.1486 18.1014 39.1486 20.111C39.1486 22.0056 38.8705 23.8742 38.3233 25.6692C38.3508 25.7358 38.3758 25.804 38.3949 25.8754L39.9633 31.7287L42.0611 31.7473C42.2805 31.7493 42.4717 31.8973 42.5284 32.1092L43.2808 34.9168C43.3376 35.1287 43.246 35.3524 43.0569 35.4639L41.2495 36.5288L42.8179 42.3821C43.0573 43.2758 42.5251 44.1977 41.6314 44.4372C41.4878 44.4757 41.3419 44.4947 41.1969 44.4947C40.906 44.4947 40.6185 44.4182 40.3589 44.2684C39.97 44.0437 39.6921 43.6823 39.5765 43.2507L39.3977 42.5834C38.151 41.8195 34.265 39.9434 27.901 41.3152C27.4309 41.4166 26.9595 41.5319 26.4896 41.6544L29.106 46.186C29.6097 47.0585 29.3097 48.178 28.4373 48.6818C28.1503 48.8475 27.8366 48.9262 27.5269 48.9263C26.8949 48.9263 26.2796 48.5986 25.9416 48.0131L22.8552 42.6672C22.7897 42.685 22.7243 42.703 22.659 42.7206C22.3501 42.8033 22.041 42.843 21.7379 42.843C20.1594 42.8432 18.7384 41.7679 18.2935 40.1076C18.1991 39.7555 18.1558 39.3992 18.1615 39.0479C17.0761 38.9374 16.0037 38.7353 14.957 38.4416C15.4235 39.403 15.6855 40.4813 15.6855 41.6198C15.6855 45.6482 12.4082 48.9256 8.37978 48.9256C4.35137 48.9256 1.07422 45.648 1.07422 41.6196C1.07422 37.8892 3.88525 34.805 7.5 34.3688C5.68897 32.763 4.17891 30.81 3.09512 28.656C1.7541 25.9906 1.07422 23.1157 1.07422 20.111C1.07422 9.61387 9.61426 1.07383 20.1114 1.07383C24.0482 1.07383 27.7854 2.24912 30.9814 4.48076V3.76104C30.9814 2.2793 32.1869 1.07373 33.6688 1.07373H46.2385C47.7202 1.07383 48.9257 2.2793 48.9257 3.76104ZM23.9003 2.44512C25.1708 3.41064 26.3296 4.86904 27.3106 6.77119C27.723 7.5707 28.0936 8.429 28.4209 9.33564C29.2893 9.121 30.1432 8.87158 30.9813 8.5875V5.6875C28.8555 4.08174 26.4555 2.98711 23.9003 2.44512ZM30.1637 20.5993C30.1196 23.9636 29.621 27.173 28.7357 29.9629C29.9226 30.2576 31.0772 30.6136 32.1892 31.0283C34.0126 29.559 34.9422 28.1299 35.3325 27.4115L35.1536 26.7438C35.0379 26.3122 35.0979 25.8603 35.3225 25.4714C35.547 25.0824 35.9084 24.8045 36.34 24.6888C36.7624 24.5759 37.1903 24.6368 37.5503 24.8251C37.9209 23.4507 38.1268 22.0342 38.1649 20.5994L30.1637 20.5993ZM18.6217 37.3323C18.8752 36.8801 19.2169 36.499 19.6231 36.2053V29.9024C17.2753 29.9339 14.9708 30.1929 12.7648 30.6658C14.0878 34.2921 16.0737 36.9379 18.388 37.8386C18.4524 37.6649 18.5301 37.4957 18.6217 37.3323ZM10.0589 19.6228C10.1027 16.2718 10.598 13.0652 11.4879 10.263C9.67705 9.8124 7.93779 9.21846 6.30078 8.48672C3.74844 11.5144 2.17051 15.3889 2.05752 19.6228H10.0589ZM11.0356 19.6228H19.6231V11.2963C17.1646 11.2642 14.7504 10.9896 12.441 10.4858C11.5668 13.2085 11.0796 16.3405 11.0356 19.6228ZM19.6231 2.07744C17.4396 2.31211 15.3804 4.11621 13.7801 7.21875C13.4036 7.94863 13.0635 8.73047 12.7606 9.55537C14.9679 10.0289 17.2738 10.2881 19.6231 10.3196V2.07744ZM11.0358 20.5993C11.0814 23.9222 11.5912 27.0577 12.4468 29.7351C14.7543 29.232 17.1666 28.9579 19.623 28.9259V20.5993H11.0358ZM20.5997 35.7113C20.6551 35.6936 20.7111 35.677 20.7678 35.6618C21.3563 35.5042 21.9557 35.3541 22.5353 35.209C23.5641 34.9514 24.6239 34.6855 25.6517 34.3698C26.3524 33.2902 26.9601 32.0445 27.4644 30.6709C25.2493 30.1961 22.9357 29.9344 20.5997 29.9025V35.7113ZM27.0797 33.8843C28.7667 33.2486 30.1404 32.4975 31.2519 31.7278C30.3344 31.408 29.3887 31.1289 28.4211 30.8912C28.033 31.9664 27.5846 32.9696 27.0797 33.8843ZM29.1872 20.5993H20.5997V28.926C23.0443 28.9585 25.4663 29.2365 27.7834 29.7414C28.6524 27.0328 29.1431 23.8973 29.1872 20.5993ZM29.1873 19.6228C29.1434 16.3412 28.6563 13.2099 27.7824 10.4877C25.4724 10.9933 23.0702 11.2649 20.5997 11.2964V19.6229L29.1873 19.6228ZM27.4634 9.5585C27.1603 8.73242 26.8197 7.94951 26.4428 7.21885C24.8425 4.11631 22.7834 2.31221 20.5997 2.07754V10.3198C22.9601 10.2889 25.2556 10.0337 27.4634 9.5585ZM6.98496 7.71953C8.51006 8.38096 10.1238 8.92178 11.8021 9.33496C12.1294 8.42861 12.4999 7.57051 12.9122 6.77119C13.8903 4.8749 15.045 3.41963 16.3109 2.454C12.6785 3.23506 9.44854 5.11123 6.98496 7.71953ZM6.2876 31.7415C7.92939 31.0066 9.67422 30.4104 11.491 29.9584C10.6016 27.1476 10.1036 23.9221 10.0592 20.5993H2.05771C2.1668 24.7479 3.66572 28.6404 6.2876 31.7415ZM14.7091 41.6196C14.7091 38.1298 11.8698 35.2904 8.37988 35.2904C4.88994 35.2904 2.05078 38.1298 2.05078 41.6196C2.05078 45.1095 4.89004 47.9488 8.37998 47.9488C11.8699 47.9488 14.7091 45.1095 14.7091 41.6196ZM14.1679 37.1693C14.8754 37.4158 15.5976 37.6189 16.3308 37.7751C14.8396 36.6413 13.5051 34.8382 12.4508 32.4931C12.2194 31.9784 12.004 31.4418 11.8043 30.8867C10.1211 31.301 8.50273 31.8438 6.97373 32.5077C7.59356 33.1616 8.2666 33.7748 8.99092 34.3414C11.0949 34.5166 12.9479 35.5863 14.1679 37.1693ZM24.15 41.2892C25.1428 41.0055 26.1646 40.7139 27.195 40.4731L25.8195 35.3398C24.8062 35.6469 23.7746 35.9054 22.7724 36.1562C22.1966 36.3005 21.6013 36.4495 21.0205 36.6052C20.3592 36.7823 19.8098 37.2102 19.4735 37.8099C19.1312 38.4205 19.0471 39.1467 19.2368 39.8546C19.6254 41.3047 21.0175 42.1491 22.4063 41.777C22.9878 41.6213 23.5786 41.4524 24.15 41.2892ZM25.5144 41.918C25.1462 42.0205 24.7801 42.1248 24.4183 42.2282C24.2231 42.284 24.0254 42.3403 23.8268 42.3967L26.7874 47.5247C27.022 47.9308 27.5432 48.0706 27.9491 47.836C28.3552 47.6016 28.4948 47.0804 28.2604 46.6743L25.5144 41.918ZM39.0471 41.2745L35.6831 28.7199C33.9001 31.3929 30.6668 33.6926 26.7503 35.0404L28.1508 40.2671C32.2164 39.4761 36.1665 39.8512 39.0471 41.2745ZM40.2257 32.7076L40.9873 35.5499L42.2415 34.8109L41.6813 32.7205L40.2257 32.7076ZM37.4518 26.128C37.3517 25.7545 36.9663 25.532 36.5928 25.6321C36.4131 25.6803 36.2623 25.7966 36.1682 25.9597C36.074 26.1227 36.0487 26.3115 36.0969 26.4911L40.5198 42.9978C40.568 43.1774 40.6843 43.3282 40.8474 43.4225C41.0105 43.5165 41.1991 43.542 41.3788 43.4937C41.7523 43.3937 41.9749 43.0082 41.8748 42.6347L37.4518 26.128ZM37.4097 14.903L35.839 16.1948C35.7498 16.2682 35.6397 16.3061 35.5287 16.3061C35.4579 16.3061 35.3867 16.2907 35.3203 16.2593C35.1495 16.1786 35.0405 16.0066 35.0405 15.8178V12.8407H33.6687C32.1869 12.8407 30.9813 11.6352 30.9813 10.1534V9.61865C30.244 9.86006 29.4945 10.0741 28.7352 10.2638C29.6249 13.0658 30.1201 16.272 30.164 19.6227H38.1648C38.1223 18.0138 37.8692 16.4312 37.4097 14.903ZM47.9491 3.76104C47.9491 2.81777 47.1817 2.05029 46.2384 2.05029H33.6687C32.7254 2.05029 31.9579 2.81768 31.9579 3.76104V10.1534C31.9579 11.0967 32.7253 11.8642 33.6687 11.8642H35.5288C35.7984 11.8642 36.0171 12.0827 36.0171 12.3524V14.7839L39.4321 11.9753C39.5195 11.9034 39.6292 11.8641 39.7423 11.8641H46.2385C47.1817 11.8641 47.9492 11.0967 47.9492 10.1533V3.76104H47.9491ZM45.292 6.46894H34.6152C34.3456 6.46894 34.127 6.6875 34.127 6.95723C34.127 7.22695 34.3456 7.44551 34.6152 7.44551H45.292C45.5616 7.44551 45.7803 7.22695 45.7803 6.95723C45.7803 6.6875 45.5616 6.46894 45.292 6.46894ZM45.292 4.04941H34.6152C34.3456 4.04941 34.127 4.26797 34.127 4.5377C34.127 4.80742 34.3456 5.02598 34.6152 5.02598H45.292C45.5616 5.02598 45.7803 4.80742 45.7803 4.5377C45.7803 4.26797 45.5616 4.04941 45.292 4.04941ZM45.292 8.88848H39.7423C39.4727 8.88848 39.254 9.10703 39.254 9.37676C39.254 9.64648 39.4727 9.86504 39.7423 9.86504H45.292C45.5616 9.86504 45.7803 9.64648 45.7803 9.37676C45.7803 9.10703 45.5616 8.88848 45.292 8.88848ZM13.7098 41.6196C13.7098 44.5585 11.3188 46.9494 8.37988 46.9494C5.44102 46.9494 3.0501 44.5585 3.0501 41.6196C3.0501 38.6807 5.44102 36.2897 8.37988 36.2897C11.3187 36.2897 13.7098 38.6807 13.7098 41.6196ZM12.7332 41.6196C12.7332 39.2192 10.7803 37.2663 8.37988 37.2663C5.97949 37.2663 4.02666 39.2192 4.02666 41.6196C4.02666 44.02 5.97949 45.9729 8.37988 45.9729C10.7803 45.9729 12.7332 44.02 12.7332 41.6196ZM8.37988 41.1313C7.99883 41.1313 7.68877 40.8213 7.68877 40.4402C7.68877 40.0593 7.99883 39.7492 8.37988 39.7492C8.61367 39.7492 8.82998 39.8663 8.95859 40.0624C9.10645 40.2879 9.40908 40.3509 9.63467 40.203C9.86025 40.0552 9.92324 39.7525 9.77529 39.527C9.55791 39.1953 9.23594 38.9575 8.86816 38.8453V38.657C8.86816 38.3873 8.64951 38.1687 8.37988 38.1687C8.11025 38.1687 7.8916 38.3873 7.8916 38.657V38.8455C7.20957 39.0549 6.71221 39.6905 6.71221 40.4402C6.71221 41.3598 7.46035 42.1079 8.37988 42.1079C8.76094 42.1079 9.071 42.418 9.071 42.7989C9.071 43.1799 8.76094 43.4899 8.37988 43.4899C8.14609 43.4899 7.92979 43.3729 7.80117 43.1768C7.65332 42.9514 7.35078 42.8884 7.1251 43.0361C6.89951 43.184 6.83652 43.4866 6.98447 43.7122C7.20186 44.0438 7.52383 44.2816 7.8916 44.3938V44.5822C7.8916 44.852 8.11025 45.0705 8.37988 45.0705C8.64951 45.0705 8.86816 44.852 8.86816 44.5822V44.3937C9.5502 44.1843 10.0476 43.5486 10.0476 42.7989C10.0476 41.8794 9.29941 41.1313 8.37988 41.1313Z"
+              stroke="#ECF0F7"
+              stroke-width="0.6"
+              mask="url(#path-1-outside-1_5493_35778)"
+            ></path>
+          </g>
+          <defs>
+            <clipPath id="clip0_5493_35778">
+              <rect width="50" height="50" fill="transperant"></rect>
+            </clipPath>
+          </defs>
+        </svg>
+      ),
+      desc: "International campaigns often sound good on paper, but fail in execution. We’ve built a full-stack system for audio across LATAM, APAC, MENA, and Europe: 160+ vetted local partners, transcreation tuned for resonance, and attribution you can actually use. With teams on the ground across six continents and a centralized performance model, we align costs, usage rights, and reporting to your global strategy without regional chaos. You’ll sound fluent from day one.",
+      img: "/images/International_image.jpg",
       alt: "Technology",
+      contentIcon: "/images/globe.svg", // Unique icon for International tab
     },
   ];
 
@@ -494,13 +407,13 @@ export default function LogoTabGrids() {
             {tabs.map((tab, index) => (
               <div
                 key={tab.name}
-                className={`w-full relative mb-[70px] last:mb-0 last:border-b-0 last:pb-0 md:mb-3.75 lg:cursor-pointer md:p-0 md:opacity-100 ${
+                className={`w-full relative mb-[50px] pt-[20px] px-[10px] pb-0 last:mb-0 last:border-b-0 last:pb-0 md:mb-3.75 lg:cursor-pointer md:p-0 md:opacity-100 ${
                   activeTab === index ? "active" : ""
                 }`}
                 onClick={() => setActiveTab(index)}
               >
                 <div
-                  className={`tab-item relative  cursor-pointer flex items-center pl-[31px] md:pb-5 md:cursor-pointer xs:pl-5 after:content-[''] after:absolute after:top-5 after:right-0 after:w-4 after:h-[23px] after:bg-[url('/images/right-arrow.svg')] after:bg-no-repeat after:bg-contain after:opacity-0 after:transition-all after:duration-400 md:after:opacity-100 xs:after:top-[6px] ${
+                  className={`tab-item relative cursor-pointer flex items-center pl-[31px] md:pb-5 md:cursor-pointer xs:pl-5 after:content-[''] after:absolute after:top-5 after:right-0 after:w-4 after:h-[23px] after:bg-[url('/images/right-arrow.svg')] after:bg-no-repeat after:bg-contain after:opacity-0 after:transition-all after:duration-400 md:after:opacity-100 xs:after:top-[6px] ${
                     activeTab === index ? "mobile-active" : ""
                   } ${
                     activeTab === index
@@ -512,21 +425,21 @@ export default function LogoTabGrids() {
                     {React.cloneElement(tab.icon, {
                       className: `w-full h-full object-cover ${
                         activeTab === index
-                          ? "[&>path]:fill-[#FF0000] [&>g>path]:fill-[#FF0000]"
+                          ? "[&>path]:fill-[#2ee5a8] [&>g>path]:fill-[#2ee5a8]"
                           : ""
                       }`,
                     })}
                   </div>
                   <h4
                     className={`text-[32px] font-medium ml-[23px] mb-0 md:text-[22px] sm:text-[20px] ${
-                      activeTab === index ? "text-[#FF0000]" : "text-white"
+                      activeTab === index ? "text-[#2ee5a8]" : "text-white"
                     }`}
                   >
                     {tab.name}
                   </h4>
                 </div>
                 {activeTab === index && (
-                  <div className="absolute border-l-[10px] border-[#FF0000] top-[-20px] left-3 bottom-0 h-[79px] md:top-[-6px] md:h-[50px] md:left-0 xs:h-[46px] xs:left-0" />
+                  <div className="absolute border-l-[10px] border-[#2ee5a8] top-[-20px] left-3 bottom-0 h-[79px] md:top-[-6px] md:h-[50px] md:left-0 xs:h-[46px] xs:left-0" />
                 )}
               </div>
             ))}
@@ -539,16 +452,18 @@ export default function LogoTabGrids() {
                   activeTab === index ? "flex" : "hidden"
                 } h-full mt-5 md:block`}
               >
-                <div className="text-wrap relative w-[51%] bg-white p-[58px_30px_94px_31px] lg:w-[45%] md:w-full md:p-[30px_20px]">
+                <div className="text-wrap relative w-[51%] min-h-[700px] bg-white p-[58px_30px_94px_31px] lg:w-[45%] md:w-full md:p-[30px_20px] overflow-hidden">
                   <div className="icon-wrap relative max-w-[75px] h-[75px] overflow-hidden z-[2] w-full inline-block md:max-w-[60px] md:max-h-[60px] sm:max-w-[50px] sm:max-h-[50px] xs:max-w-10 xs:h-10">
                     <img
-                      src="/images/microphone-icon.svg"
-                      alt="Microphone settings"
+                      src={tab.contentIcon} // Use the contentIcon from the active tab
+                      alt={`${tab.name} icon`} // Dynamic alt text
                       className="w-full h-full object-contain"
                       onError={() =>
-                        console.error("Failed to load microphone icon")
+                        console.error(`Failed to load icon: ${tab.contentIcon}`)
                       }
-                      onLoad={() => console.log("Loaded microphone icon")}
+                      onLoad={() =>
+                        console.log(`Loaded icon: ${tab.contentIcon}`)
+                      }
                     />
                   </div>
                   <div className="inner-text w-full my-[30px]">
@@ -562,7 +477,7 @@ export default function LogoTabGrids() {
                     </a>
                   </div>
                 </div>
-                <div className="img-item w-[70%] overflow-hidden  min-h-full lg:w-[55%] lg:h-full md:h-[300px] md:mb-10 md:w-full sm:h-[300px] sm:mb-10 sm:w-full xs:h-[250px] xs:mb-10 xs:w-full">
+                <div className="img-item w-[70%] overflow-hidden min-h-full lg:w-[55%] lg:h-full md:h-[300px] md:mb-10 md:w-full sm:h-[300px] sm:mb-10 sm:w-full xs:h-[250px] xs:mb-10 xs:w-full">
                   <img
                     src={tab.img}
                     alt={tab.alt}
