@@ -15,7 +15,7 @@ export default function IntroWithTab() {
   ];
 
   return (
-    <section className="IntroWithTab bg-[#b5ed0c]">
+    <section className="IntroWithTab bg-[#e07f09]">
       <div className="container">
         <h2 className="text-[#fff] text-center">Accordion With image</h2>
         {/*
