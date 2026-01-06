@@ -1,0 +1,47 @@
+.navWrapper {
+  margin-right: 22px;
+}
+.navWrapper .tableTitle {
+  background-color: #202020;
+  border-radius: 5px;
+  padding: 9px 18px;
+  width: 265px;
+  cursor: pointer;
+}
+.navWrapper .tableTitle p {
+  position: relative;
+  color: white;
+}
+.navWrapper .tableTitle p::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: 22px;
+  width: 9px;
+  height: 9px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out,
+    -webkit-transform 0.3s ease-in-out, -o-transform 0.3s ease-in-out;
+}
+.navWrapper .list {
+  background-color: #202020;
+  margin-top: 2px;
+  padding: 20px 14px 16px 10px;
+  position: absolute;
+  z-index: 3;
+  width: 265px;
+  border-radius: 5px;
+  display: none;
+}
+.inputWrapper {
+  border-bottom: 0.4px solid #707070;
+}
+
+.navWrapper.active .list {
+  display: block;
+}

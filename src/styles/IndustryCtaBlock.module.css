@@ -1,0 +1,13 @@
+.outerWrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.8) 21.63%,
+    rgba(0, 0, 0, 0) 84.05%
+  );
+}
