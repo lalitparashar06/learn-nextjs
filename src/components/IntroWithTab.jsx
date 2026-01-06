@@ -67,7 +67,7 @@ export default function IntroWithTab() {
             {[1, 2, 3, 4].map((_, index) => (
               <div
                 key={index}
-                className={`img-wrap relative overflow-hidden w-full h-[557px] transition-opacity duration-500 ${
+                className={`img-wrap relative overflow-hidden w-full h-[661px] transition-opacity duration-500 ${
                   activeIndex === index
                     ? "block opacity-100"
                     : "hidden opacity-0"
