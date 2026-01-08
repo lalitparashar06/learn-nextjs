@@ -11,7 +11,7 @@
 }
 
 .scrolled {
-  background-color: black; /* Red color when scrolled */
+  background-color: #fff; /* Red color when scrolled */
 }
 
 .logo {
@@ -47,7 +47,7 @@
 }
 
 .scrolledLink {
-  color: #fff;
+  color: #000;
 }
 
 .navLink:hover {
