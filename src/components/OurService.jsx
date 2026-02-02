@@ -6,56 +6,44 @@ export default function OurService() {
         <h2 className="text-center">Our Services</h2>
         <div className="row relative w-[calc(100%+40px)]  flex flex-wrap mt-[100px]">
           <div className="col-three w-[calc(33.33%-40px)]  mt-0 mx-[20px] ">
-            <div className="icon max-w-[100px] m-auto">
-              <img
-                src="/images/build-future-gold-glitter-square-frame-Y8R1Rqtk_t.jpg"
-                className="object-contain"
-              ></img>
-            </div>
-            <div className="text-wrap">
-              <h3>Better Future</h3>
-              <p>
+            <div className="text-wrap px-[46px] py-[60px] border-[1px] border-[antiquewhite] text-center hover:shadow-[0px_20px_30px_0px_rgba(0,0,0,0.25)]">
+              <h5>Better Future</h5>
+              <p className="pt-[20px]">
                 Set have great you male grasses yielding yielding first their to
                 called deep abundantly Set have great you male
               </p>
-              <div className="btn">
-                <a href="#">Read more</a>
+              <div className="btn mt-[20px]">
+                <a href="#" className="capitalize hover:text-[red]">
+                  Read more
+                </a>
               </div>
             </div>
           </div>
           <div className="col-three w-[calc(33.33%-40px)] mt-0 mx-[20px] ">
-            <div className="icon max-w-[100px] m-auto">
-              <img
-                src="/images/build-future-gold-glitter-square-frame-Y8R1Rqtk_t.jpg"
-                className="object-contain"
-              ></img>
-            </div>
-            <div className="text-wrap">
-              <h3>Qualified Trainers</h3>
-              <p>
+            <div className="text-wrap px-[46px] py-[60px] border-[1px] border-[antiquewhite] text-center hover:shadow-[0px_20px_30px_0px_rgba(0,0,0,0.25)]">
+              <h5>Qualified Trainers</h5>
+              <p className="pt-[20px]">
                 Set have great you male grasses yielding yielding first their to
                 called deep abundantly Set have great you male
               </p>
-              <div className="btn">
-                <a href="#">Read more</a>
+              <div className="btn mt-[20px]">
+                <a href="#" className="capitalize hover:text-[red]">
+                  Read more
+                </a>
               </div>
             </div>
           </div>
           <div className="col-three w-[calc(33.33%-40px)]  mt-0 mx-[20px] ">
-            <div className="icon max-w-[100px] m-auto">
-              <img
-                src="/images/build-future-gold-glitter-square-frame-Y8R1Rqtk_t.jpg"
-                className="object-contain"
-              ></img>
-            </div>
-            <div className="text-wrap">
-              <h3>Job Oppurtunity</h3>
-              <p>
+            <div className="text-wrap px-[46px] py-[60px]  border-[1px] border-[antiquewhite] text-center hover:shadow-[0px_20px_30px_0px_rgba(0,0,0,0.25)]">
+              <h5>Job Oppurtunity</h5>
+              <p className="pt-[20px]">
                 Set have great you male grasses yielding yielding first their to
                 called deep abundantly Set have great you male
               </p>
-              <div className="btn">
-                <a href="#">Read more</a>
+              <div className="btn mt-[20px]">
+                <a href="#" className="capitalize hover:text-[red]">
+                  Read more
+                </a>
               </div>
             </div>
           </div>
