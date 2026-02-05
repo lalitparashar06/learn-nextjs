@@ -2,19 +2,22 @@ import React from "react";
 export default function AboutConstruction() {
   return (
     <section class="AboutConstruction relative  ">
-      <div className="bg-img absolute top-0 left-0 mt-[50px]">
+      <div className="bg-img absolute top-0 left-0 mt-[50px] laptopDown:hidden">
         <img src="/images/about_overlay.png"></img>
       </div>
       <div className="container">
-        <div className="row relative w-full flex flex-wrap  justify-between ml-[-15px] mr-[-15px]">
-          <div className="col-two w-[50%] pr-[15px] pl-[15px]">
+        <div className="row relative w-full flex flex-wrap  justify-between ml-[-15px] mr-[-15px] items-center justify-between">
+          <div className="col-two w-[50%] pr-[15px] pl-[15px] md:w-full">
             <div className="img-wrap">
-              <img src="/images/about_part_img.png"></img>
+              <img
+                src="/images/about_part_img.png"
+                className="object-contain"
+              ></img>
             </div>
           </div>
-          <div className="col-two  w-[50%] pr-[15px] pl-[15px]">
-            <div className="text-wrap pl-[100px] pt-[50px]">
-              <h2 className="text-[#001b5e] capitalize text-[68px]">
+          <div className="col-two  w-[50%] pr-[15px]  flex items-center md:w-full">
+            <div className="text-wrap pl-[100px] pt-[50px] lg:pl-[40px] ">
+              <h2 className="text-[#001b5e] capitalize text-[68px] lg:text-[37px] mdDown:text-[30px]  ">
                 Engineering Your Dreams With Us
               </h2>
               <p className="pt-[30px]">
