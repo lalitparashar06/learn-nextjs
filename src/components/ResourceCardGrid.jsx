@@ -1641,7 +1641,7 @@
 //   );
 // }
 
-/////////// 7 //////////////////////////////
+/////////// 6 //////////////////////////////
 
 // import React, { useEffect, useState } from "react";
 
@@ -1974,6 +1974,8 @@
 //   );
 // }
 
+///////////******6*******////////////
+
 import React, { useEffect, useState } from "react";
 
 // 🔥 SAME DATA
@@ -2155,6 +2157,7 @@ export default function ResourceCardGrid() {
     <section className="ResourceCardGrid relative bg-[linear-gradient(180deg,rgba(255,255,255,0.15)_0%,rgba(113,197,232,0.15)_60.5%)]">
       <div className="container">
         {/* FILTERS */}
+        <h2 className="text-center mb-[50px]">All Sponsorship Opportunities</h2>
         <div className="flex gap-4 mb-6 px-[15px]">
           <input
             placeholder="Search"
@@ -2230,14 +2233,15 @@ export default function ResourceCardGrid() {
         )}
 
         {/* CARDS */}
-        <div className="outer-wrap flex flex-wrap w-[calc(100%+30px)] ml-[-15px] ">
+        <div className="outer-wrap flex flex-wrap w-[calc(100%+30px)] ml-[-15px] md:w-full ">
           {currentItems.map((item, index) => {
             const realIndex = indexOfFirstItem + index;
 
             return (
               <div
                 key={item.id}
-                className="item w-[calc(33.33%-30px)] mx-[15px] my-[15px] rounded-[30px] bg-[#fff] relative pb-[64px]"
+                className="item w-[calc(33.33%-30px)] mx-[15px] my-[15px] rounded-[30px] bg-[#fff] relative pb-[64px] lg:w-[calc(50%-20px)] lg:ml-[10px] lg:mr-[10px]  md:w-full md:mx-0
+"
               >
                 <div className="inner-content">
                   <div className="img-wrap h-[200px]">
@@ -2280,7 +2284,8 @@ export default function ResourceCardGrid() {
         </div>
 
         {/* PAGINATION */}
-        <div className="flex justify-center gap-3 mt-10">
+
+        {/* <div className="flex justify-center gap-3 mt-10">
           <button onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}>
             ←
           </button>
@@ -2293,6 +2298,67 @@ export default function ResourceCardGrid() {
 
           <button
             onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
+          >
+            →
+          </button>
+        </div> */}
+        {/* 🔢 PAGINATION */}
+        <div className="flex justify-center items-center gap-3 mt-10">
+          {/* ⬅️ PREV */}
+          <button
+            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+            disabled={currentPage === 1}
+            className="text-2xl px-2 disabled:opacity-30"
+          >
+            ←
+          </button>
+
+          {/* 🔢 PAGE NUMBERS */}
+          {(() => {
+            const pages = [];
+
+            for (let i = 1; i <= totalPages; i++) {
+              // show first 4 pages
+              if (i <= 8) {
+                pages.push(i);
+              }
+
+              // show last page
+              else if (i === totalPages) {
+                pages.push("...");
+                pages.push(i);
+              }
+            }
+
+            return pages.map((page, index) =>
+              page === "..." ? (
+                <span key={index} className="px-2">
+                  ...
+                </span>
+              ) : (
+                <button
+                  key={index}
+                  onClick={() => setCurrentPage(page)}
+                  className={`w-10 h-10 flex items-center justify-center rounded-md border
+          ${
+            currentPage === page
+              ? "border-green-500 text-green-600 font-semibold"
+              : "border-transparent"
+          }`}
+                >
+                  {page}
+                </button>
+              ),
+            );
+          })()}
+
+          {/* ➡️ NEXT */}
+          <button
+            onClick={() =>
+              setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+            }
+            disabled={currentPage === totalPages}
+            className="text-2xl px-2 disabled:opacity-30 text-green-500"
           >
             →
           </button>

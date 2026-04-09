@@ -1,0 +1,13 @@
+.HoustonHeroBanner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 59, 92, 0) -60.82%,
+    #003b5c 95.75%
+  );
+}
