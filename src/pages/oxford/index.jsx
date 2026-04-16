@@ -1,5 +1,5 @@
+import MenuCard from "@/components/MenuCard";
 import BannerOxford from "@/components/BannerOxford";
-
 import LogoTabGrids from "@/components/LogoTabGrids";
 import IntroWithVideo from "@/components/IntroWithVideo";
 import VideoOverlay from "@/components/VideoOverlay";
@@ -21,6 +21,7 @@ import BgCta from "@/components/BgCta";
 export default function Index() {
   return (
     <>
+      <MenuCard />
       <BannerOxford />
 
       <LogoTabGrids />

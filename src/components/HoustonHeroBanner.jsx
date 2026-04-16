@@ -22,7 +22,7 @@ export default function HoustonHeroBanner() {
           <div className="btn mt-[30px] ">
             <a
               href="#"
-              className="bg-[#71cc98] px-[30px] py-[20px] rounded-[100px] inline-block "
+              className="bg-[#71cc98] border-[#71cc98] border px-[30px] py-[20px] rounded-[100px] inline-block hover:bg-[transparent] hover:text-[#fff] hover:border hover:border-[#71cc98]"
             >
               See How
             </a>

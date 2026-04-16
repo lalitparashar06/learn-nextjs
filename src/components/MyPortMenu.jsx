@@ -24,7 +24,7 @@ const Header = () => {
     { name: "Contact", href: "/contact" },
     { name: "crosspoint", href: "/crosspoint" },
     { name: "Base", href: "/Base" },
-    { name: "Work", href: "/Work" },
+    { name: "partnership", href: "/partnership" },
   ];
 
   const toggleMenu = () => {

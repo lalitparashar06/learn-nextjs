@@ -132,80 +132,6 @@ function App() {
   return (
     <>
       {/* Navbar */}
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="text-2xl font-bold text-blue-600">
-              Lalit Parashar
-            </div>
-
-            {/* Desktop Menu */}
-            <ul className="hidden md:flex space-x-8">
-              {["home", "about", "skills", "projects", "contact"].map(
-                (item) => (
-                  <li key={item}>
-                    <button
-                      onClick={() => scrollTo(item)}
-                      className="text-gray-700 hover:text-blue-600 font-medium capitalize transition"
-                    >
-                      {item}
-                    </button>
-                  </li>
-                )
-              )}
-            </ul>
-
-            {/* Mobile Hamburger */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2"
-            >
-              <svg
-                className="w-7 h-7"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                {isMenuOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                )}
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-white border-t">
-            <ul className="px-4 py-3 space-y-2">
-              {["home", "about", "skills", "projects", "contact"].map(
-                (item) => (
-                  <li key={item}>
-                    <button
-                      onClick={() => scrollTo(item)}
-                      className="block w-full text-left py-2 text-gray-700 hover:text-blue-600 capitalize font-medium"
-                    >
-                      {item}
-                    </button>
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
-        )}
-      </nav>
 
       {/* Hero */}
       <section
@@ -449,5 +375,4 @@ function App() {
     </>
   );
 }
-
 export default App;
