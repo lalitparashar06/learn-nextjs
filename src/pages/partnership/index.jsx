@@ -13,6 +13,7 @@ export default function Index() {
       <MenuCard />
       <HoustonHeroBanner />
       <HoustonVideoBlock />
+      <ResourceCardGrid />
       <TabWithGrid />
       <IntroWithCounter />
     </>
